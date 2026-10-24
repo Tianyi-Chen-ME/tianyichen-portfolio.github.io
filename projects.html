@@ -10,7 +10,7 @@
   <title>Projects | Troy Chen</title>
 
   <link rel="stylesheet" href="style.css?v=14">
-  </head>
+</head>
 
 <body>
 
@@ -20,16 +20,15 @@
       Tianyi's Portfolio
     </a>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="resume.html">Resume</a>
-    <a href="experience.html">Experience</a>
-    <a href="projects.html">Projects</a>
-    <a href="honors.html">UMich Honors Program</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="resume.html">Resume</a>
+      <a href="experience.html">Experience</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="honors.html">UMich Honors Program</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
 
@@ -83,6 +82,26 @@
 
 
       <!-- Project 3 -->
+      <button
+        class="card project-card"
+        type="button"
+        data-project="newproject"
+        aria-haspopup="dialog"
+      >
+
+        <span class="project-title">
+          New Engineering Project
+        </span>
+
+        <span class="project-summary">
+          Click here to learn more about
+          this engineering project.
+        </span>
+
+      </button>
+
+
+      <!-- Project 4 -->
       <button
         class="card project-card"
         type="button"
@@ -141,31 +160,64 @@
     // Information for each project
     const projects = {
 
-      // Micro-Combustion Actuator
+      // Project 1: Micro-Combustion Actuator
       combustion: {
         title: "Micro-Combustion Actuator",
 
         description:
           "Research and development of micro-combustion systems for insect-scale robotic applications.",
 
-        extra:
-          "Exploring fuel generation, fuel delivery, and combustion-based actuation for miniature robotic systems. Additional design information, prototype images, and testing results can be added here."
+        extra: `
+Exploring fuel generation, fuel delivery,
+and combustion-based actuation for
+miniature robotic systems.
+
+Additional design information, prototype
+images, and testing results can be added here.
+`
       },
 
 
-      // Photodiode Sensor System
+      // Project 2: Photodiode Sensor System
       photodiode: {
         title: "Photodiode Sensor System",
 
         description:
           "Development of photodiode-based sensing circuits for optical measurements in combustion research.",
 
-        extra:
-          "Developing electronic sensing systems that convert photodiode current into measurable voltage signals. Circuit diagrams, hardware photographs, and experimental results can be added here."
+        extra: `
+Developing electronic sensing systems
+that convert photodiode current into
+measurable voltage signals.
+
+Circuit diagrams, hardware photographs,
+and experimental results can be added here.
+`
       },
 
 
-      // Future Projects
+      // Project 3: New Engineering Project
+      newproject: {
+        title: "New Engineering Project",
+
+        description:
+          "Write a short overview of your new engineering project here.",
+
+        extra: `
+Write your project details here.
+
+You can describe the engineering problem,
+design process, and software used.
+
+You can also discuss the technical challenges,
+solutions, and final results.
+
+Add additional paragraphs as needed.
+`
+      },
+
+
+      // Project 4: Future Projects
       future: {
         title: "Future Projects",
 

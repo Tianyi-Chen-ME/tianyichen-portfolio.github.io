@@ -27,3 +27,5 @@ MECHANICAL ENGINEERING INTERN – Hardware/Structure Design and Testing	June 202
 •	Debugged robot dog lithium battery pack code by making a monitor app using Python that displayed battery data along with processing battery usage data automatically to catch unusual behavior and errors when undergoing charging with different current and uneven discharging 
 
 ### Honors Plan Development 
+
+honors college 

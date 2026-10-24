@@ -362,3 +362,164 @@ body.page-changing .page-fade {
     height: 250px;
   }
 }
+
+
+.experience-section {
+  max-width: 1228px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+}
+
+.experience-section h2 {
+  font-size: 56px;
+  color: #19263b;
+  margin-bottom: 35px;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Collapsed experience cards */
+.experience-card {
+  width: 100%;
+  min-height: 240px;
+  padding: 35px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+
+  background: white;
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.04);
+
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.experience-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.10);
+}
+
+.experience-card:focus-visible {
+  outline: 3px solid #007bdf;
+  outline-offset: 4px;
+}
+
+.experience-card-text {
+  flex: 1;
+}
+
+.experience-card h3 {
+  font-size: 27px;
+  font-weight: 700;
+  color: #19263b;
+  margin-bottom: 16px;
+}
+
+.experience-date {
+  color: #536179;
+  font-size: 18px;
+}
+
+/* Square image area */
+.experience-photo {
+  width: 185px;
+  height: 185px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #e9edf2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #7b8593;
+}
+
+.experience-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Expanded modal */
+.experience-modal {
+  width: min(850px, 90vw);
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 50px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
+  color: #19263b;
+}
+
+.experience-modal[open] {
+  margin: auto;
+}
+
+.experience-modal::backdrop {
+  background: rgba(16, 25, 40, 0.55);
+  backdrop-filter: blur(4px);
+}
+
+.experience-modal h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.experience-modal h3 {
+  font-size: 21px;
+  margin: 20px 0;
+}
+
+.experience-modal p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #536179;
+}
+
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 25px;
+  border: none;
+  background: transparent;
+  font-size: 32px;
+  cursor: pointer;
+  color: #536179;
+}
+
+@media (max-width: 700px) {
+  .experience-section h2 {
+    font-size: 38px;
+  }
+
+  .experience-card {
+    padding: 25px;
+    min-height: 160px;
+  }
+
+  .experience-card h3 {
+    font-size: 20px;
+  }
+
+  .experience-photo {
+    width: 110px;
+    height: 110px;
+  }
+
+  .experience-modal {
+    padding: 35px 25px;
+  }
+}
+

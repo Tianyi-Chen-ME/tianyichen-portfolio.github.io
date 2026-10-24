@@ -916,3 +916,6 @@ body.page-changing .page-fade {
     font-size: 48px;
   }
 }
+#modal-description {
+  white-space: pre-line;
+}

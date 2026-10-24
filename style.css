@@ -1015,3 +1015,32 @@ body.page-changing .page-fade {
   }
 
 }
+
+
+/* =========================================
+   LOCK BACKGROUND SCROLL WHEN POPUP OPENS
+========================================= */
+
+/* Prevent the outside webpage from scrolling */
+html:has(dialog[open]),
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+/* Allow scrolling inside the popup */
+dialog[open] {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+/* Experience and Projects Popups */
+.experience-modal {
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+/* Honors Program Popup */
+.honors-modal {
+  max-height: 90vh;
+  overflow-y: auto;
+}

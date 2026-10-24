@@ -1084,3 +1084,44 @@ dialog[open] {
   }
 
 }
+
+
+/* Portfolio Footer */
+
+.portfolio-footer {
+  background: white;
+  padding: 35px 20px;
+  text-align: center;
+  border-top: 1px solid #e0e5eb;
+}
+
+.footer-credit {
+  font-size: 16px;
+  font-weight: 600;
+  color: #172337;
+  margin-bottom: 12px;
+}
+
+.footer-description {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  font-size: 14px;
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}

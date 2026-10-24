@@ -9,7 +9,7 @@
 
   <title>Contact | Troy Chen</title>
 
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=12">
 
   <!-- Social Media Icons -->
   <link rel="stylesheet"
@@ -30,6 +30,7 @@
       <a href="resume.html">Resume</a>
       <a href="experience.html">Experience</a>
       <a href="projects.html">Projects</a>
+      <a href="honors.html">UMich Honors Program</a>
       <a href="contact.html" class="active">Contact</a>
     </nav>
   </header>
@@ -50,40 +51,46 @@
         collaborations. Feel free to send me a message!
       </p>
 
+
       <!-- Contact Form -->
-      <!-- REPLACE YOUR_EMAIL@example.com -->
       <form
         action="https://formsubmit.co/chentroy@umich.edu"
         method="POST"
         class="contact-form"
       >
 
+        <!-- Redirect to Custom Success Page -->
         <input
           type="hidden"
           name="_next"
-          value="https://tianyi-chen-me.github.io/tianyichen-portfolio.github.io/contact.html"
+          value="https://tianyi-chen-me.github.io/tianyichen-portfolio.github.io/thanks.html"
         >
-        
+
+        <!-- Website URL -->
         <input
           type="hidden"
           name="_url"
           value="https://tianyi-chen-me.github.io/tianyichen-portfolio.github.io/contact.html"
         >
 
-        <!-- Email Settings -->
+
+        <!-- Email Subject -->
         <input
           type="hidden"
           name="_subject"
           value="New Message From My Portfolio!"
         >
 
+
+        <!-- Email Formatting -->
         <input
           type="hidden"
           name="_template"
           value="table"
         >
 
-        <!-- Anti-Spam -->
+
+        <!-- Anti-Spam Protection -->
         <input
           type="text"
           name="_honey"
@@ -93,7 +100,7 @@
         >
 
 
-        <!-- Name -->
+        <!-- Full Name -->
         <div class="form-group">
 
           <label for="contact-name">
@@ -130,7 +137,7 @@
         </div>
 
 
-        <!-- Email -->
+        <!-- Visitor Email -->
         <div class="form-group">
 
           <label for="contact-email">
@@ -172,7 +179,7 @@
           type="submit"
           class="contact-submit-btn"
         >
-          <i class="bi bi-send"></i>
+          <i class="bi bi-send" aria-hidden="true"></i>
           Send Message
         </button>
 
@@ -181,7 +188,7 @@
     </div>
 
 
-    <!-- Social Media Links -->
+    <!-- Social Media Section -->
     <div class="content-box">
 
       <h2>Find Me Online</h2>
@@ -195,9 +202,10 @@
           rel="noopener noreferrer"
           class="social-btn"
         >
-          <i class="bi bi-linkedin"></i>
+          <i class="bi bi-linkedin" aria-hidden="true"></i>
           LinkedIn
         </a>
+
 
         <!-- GitHub -->
         <a
@@ -206,9 +214,10 @@
           rel="noopener noreferrer"
           class="social-btn"
         >
-          <i class="bi bi-github"></i>
+          <i class="bi bi-github" aria-hidden="true"></i>
           GitHub
         </a>
+
 
         <!-- Instagram -->
         <a
@@ -217,7 +226,7 @@
           rel="noopener noreferrer"
           class="social-btn"
         >
-          <i class="bi bi-instagram"></i>
+          <i class="bi bi-instagram" aria-hidden="true"></i>
           Instagram
         </a>
 
@@ -233,3 +242,4 @@
 
 </body>
 </html>
+

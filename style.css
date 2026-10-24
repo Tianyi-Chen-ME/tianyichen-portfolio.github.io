@@ -293,6 +293,7 @@ body.page-changing .page-fade {
   pointer-events: auto;
 }
 
+
 /* Education Section */
 
 .education-item {
@@ -303,9 +304,11 @@ body.page-changing .page-fade {
   margin-top: 20px;
 }
 
-.education-logo {
+.education-item img.education-logo {
   width: 45px;
   height: 45px;
+  max-width: 45px;
+  max-height: 45px;
   object-fit: contain;
   flex-shrink: 0;
 }
@@ -313,6 +316,7 @@ body.page-changing .page-fade {
 .education-info {
   display: flex;
   flex-direction: column;
+  flex: 1;
   gap: 3px;
 }
 

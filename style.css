@@ -616,3 +616,77 @@ body.page-changing .page-fade {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 119, 204, 0.2);
 }
+
+
+/* =========================================
+   PROJECT CARDS - CLICKABLE
+========================================= */
+
+.project-card {
+  display: block;
+  width: 100%;
+  min-height: 220px;
+
+  border: none;
+  text-align: left;
+  cursor: pointer;
+
+  font: inherit;
+  color: inherit;
+}
+
+/* Project Titles */
+
+.project-title {
+  display: block;
+
+  font-size: 24px;
+  font-weight: 700;
+
+  color: #172337;
+  margin-bottom: 15px;
+}
+
+/* Project Summaries */
+
+.project-summary {
+  display: block;
+
+  font-size: 17px;
+  line-height: 1.9;
+
+  color: #526275;
+}
+
+/* Keyboard Focus */
+
+.project-card:focus-visible {
+  outline: 3px solid #0077cc;
+  outline-offset: 4px;
+}
+
+/* Project Popup Text */
+
+.project-modal #project-modal-description,
+.project-modal #project-modal-extra {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+  .project-card {
+    min-height: 180px;
+  }
+
+  .project-title {
+    font-size: 21px;
+  }
+
+  .project-summary {
+    font-size: 16px;
+  }
+
+}

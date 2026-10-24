@@ -560,3 +560,87 @@ body.page-changing .page-fade {
     backdrop-filter: blur(4px);
   }
 }
+
+
+/* Make Experience Boxes 2x Larger */
+
+/* Increase overall page width */
+.experience-page {
+  max-width: 2200px;
+}
+
+/* Make all experience cards taller */
+.experience-page .experience-card {
+  width: 100%;
+  min-height: 220px;
+  margin-bottom: 40px;
+  border-radius: 20px;
+}
+
+/* Increase clickable header size */
+.experience-page .experience-toggle {
+  min-height: 220px;
+  padding: 56px;
+  gap: 35px;
+}
+
+/* Double the institution logo size */
+.experience-page .experience-logo {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+}
+
+/* Increase title sizes */
+.experience-page .experience-heading h2 {
+  font-size: 32px;
+}
+
+.experience-page .experience-heading h3 {
+  font-size: 22px;
+}
+
+.experience-page .experience-date {
+  font-size: 18px;
+}
+
+/* Increase expanded content spacing */
+.experience-page .experience-details-inner {
+  padding: 0 56px;
+}
+
+/* Also support regular experience content boxes */
+.experience-page .content-box {
+  min-height: 220px;
+  padding: 70px;
+}
+
+/* Keep cards usable on smaller screens */
+@media (max-width: 600px) {
+  .experience-page .experience-toggle {
+    min-height: 140px;
+    padding: 24px;
+    gap: 18px;
+  }
+
+  .experience-page .experience-logo {
+    width: 65px;
+    height: 65px;
+  }
+
+  .experience-page .experience-heading h2 {
+    font-size: 22px;
+  }
+
+  .experience-page .experience-heading h3 {
+    font-size: 17px;
+  }
+
+  .experience-page .experience-details-inner {
+    padding: 0 24px;
+  }
+
+  .experience-page .content-box {
+    padding: 35px;
+  }
+}

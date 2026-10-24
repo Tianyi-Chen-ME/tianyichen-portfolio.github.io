@@ -9,13 +9,133 @@
 
   <title>Projects | Troy Chen</title>
 
-  <link rel="stylesheet" href="style.css?v=14">
+  <link rel="stylesheet" href="style.css?v=15">
+
+  <!-- Project Popup Image Styling -->
+  <style>
+
+    /* =========================================
+       PROJECT POPUP - TEXT AND IMAGE LAYOUT
+    ========================================= */
+
+    .project-modal {
+      width: min(1100px, 95vw);
+      max-width: 95vw;
+      max-height: 85vh;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+
+    /* Left Text and Right Image */
+    .project-modal-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 280px;
+      gap: 35px;
+      align-items: start;
+      margin-top: 20px;
+    }
+
+    /* Left Side Text */
+    .project-modal-text {
+      min-width: 0;
+    }
+
+    .project-modal-text h3 {
+      font-size: 21px;
+      margin-top: 0;
+      margin-bottom: 20px;
+      color: #19263b;
+    }
+
+    .project-modal-text p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 30px;
+      color: #536179;
+      white-space: pre-line;
+    }
+
+    /* =========================================
+       SQUARE PROJECT IMAGE
+    ========================================= */
+
+    .project-modal-image {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+
+      background: #e9edf2;
+      border: 1px solid #dce3eb;
+      border-radius: 15px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      overflow: hidden;
+    }
+
+    /* Actual Project Image */
+    .project-modal-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Hide Image Until Available */
+    .project-modal-image img[hidden],
+    .project-modal-image span[hidden] {
+      display: none;
+    }
+
+    /* Placeholder When Image Is Missing */
+    .project-image-placeholder {
+      padding: 20px;
+      text-align: center;
+      color: #7b8593;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    /* =========================================
+       MOBILE LAYOUT
+    ========================================= */
+
+    @media (max-width: 700px) {
+
+      .project-modal {
+        padding: 35px 25px;
+      }
+
+      .project-modal-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .project-modal-image {
+        max-width: 280px;
+      }
+
+      .project-modal-text h3 {
+        font-size: 20px;
+      }
+
+      .project-modal-text p {
+        font-size: 16px;
+      }
+
+    }
+
+  </style>
+
 </head>
+
 
 <body>
 
   <!-- Navigation Bar -->
   <header>
+
     <a href="index.html" class="logo">
       Tianyi's Portfolio
     </a>
@@ -29,6 +149,7 @@
       <a href="honors.html">UMich Honors Program</a>
       <a href="contact.html">Contact</a>
     </nav>
+
   </header>
 
 
@@ -39,7 +160,11 @@
 
     <div class="cards">
 
-      <!-- Project 1 -->
+
+      <!-- =====================================
+           PROJECT 1
+      ====================================== -->
+
       <button
         class="card project-card"
         type="button"
@@ -52,17 +177,21 @@
         </span>
 
         <span class="project-summary">
-        Designed a four-bar linkage system with a flashlight 
-        attached to the end coupler controlled by motor to 
+        Designed a four-bar linkage system with a flashlight
+        attached to the end coupler controlled by motor to
         shine flashlight on multiple photodiode target, with precision,
-        The system included a full automated control system powered by 
-        Arduino 
+        The system included a full automated control system powered by
+        Arduino
         </span>
 
       </button>
 
 
-      <!-- Project 2 -->
+
+      <!-- =====================================
+           PROJECT 2
+      ====================================== -->
+
       <button
         class="card project-card"
         type="button"
@@ -75,7 +204,7 @@
         </span>
 
         <span class="project-summary">
-          Designed and built a smart watch 
+          Designed and built a smart watch
           from PCB to soldering, then finally
           coding it to operate. Used standard Lithium
           drone battery and touch screen smart watch
@@ -85,7 +214,11 @@
       </button>
 
 
-      <!-- Project 3 -->
+
+      <!-- =====================================
+           PROJECT 3
+      ====================================== -->
+
       <button
         class="card project-card"
         type="button"
@@ -98,15 +231,19 @@
         </span>
 
         <span class="project-summary">
-          Made a working Microcontroller keychian using 
-          STM32F4 as the MCU, with all the GPIO pins connected 
+          Made a working Microcontroller keychian using
+          STM32F4 as the MCU, with all the GPIO pins connected
           to pin header slots. (PCB printed unsoldered)
         </span>
 
       </button>
 
 
-      <!-- Project 4 -->
+
+      <!-- =====================================
+           PROJECT 4
+      ====================================== -->
+
       <button
         class="card project-card"
         type="button"
@@ -125,12 +262,17 @@
 
       </button>
 
+
     </div>
 
   </main>
 
 
-  <!-- Project Popup -->
+
+  <!-- =========================================
+       PROJECT POPUP
+  ========================================= -->
+
   <dialog
     class="experience-modal project-modal"
     id="project-modal"
@@ -146,28 +288,75 @@
       &times;
     </button>
 
+
+    <!-- Project Title -->
     <h2 id="project-modal-title"></h2>
 
-    <h3>Project Overview</h3>
 
-    <p id="project-modal-description"></p>
+    <!-- Text Left / Image Right -->
+    <div class="project-modal-layout">
 
-    <h3>Additional Details</h3>
 
-    <p id="project-modal-extra"></p>
+      <!-- LEFT SIDE -->
+      <div class="project-modal-text">
+
+        <h3>Project Overview</h3>
+
+        <p id="project-modal-description"></p>
+
+
+        <h3>Additional Details</h3>
+
+        <p id="project-modal-extra"></p>
+
+      </div>
+
+
+
+      <!-- RIGHT SIDE -->
+      <div class="project-modal-image">
+
+        <!-- Project Image -->
+        <img
+          id="project-modal-image"
+          alt="Project Image"
+          hidden
+        >
+
+        <!-- Placeholder -->
+        <span
+          id="project-image-placeholder"
+          class="project-image-placeholder"
+        >
+          Add Project Photo
+        </span>
+
+      </div>
+
+
+    </div>
 
   </dialog>
 
 
-  <!-- Project Popup JavaScript -->
+
+  <!-- =========================================
+       PROJECT POPUP JAVASCRIPT
+  ========================================= -->
+
   <script>
 
-    // Information for each project
+    // Information for Each Project
     const projects = {
 
-      // Project 1: Micro-Combustion Actuator
+
+      // ======================================
+      // PROJECT 1: FOUR-BAR LINKAGE SYSTEM
+      // ======================================
+
       combustion: {
-        title: "Micro-Combustion Actuator",
+
+        title: "ME 350 Four-Bar Linkage System",
 
         description:
           "Research and development of micro-combustion systems for insect-scale robotic applications.",
@@ -179,13 +368,22 @@ miniature robotic systems.
 
 Additional design information, prototype
 images, and testing results can be added here.
-`
+`,
+
+        // Project Image Filename
+        image: "ME 350 Four-Bar Linkage System.jpg"
+
       },
 
 
-      // Project 2: Photodiode Sensor System
+
+      // ======================================
+      // PROJECT 2: SMART WATCH
+      // ======================================
+
       photodiode: {
-        title: "Photodiode Sensor System",
+
+        title: "Smart Watch",
 
         description:
           "Development of photodiode-based sensing circuits for optical measurements in combustion research.",
@@ -197,13 +395,22 @@ measurable voltage signals.
 
 Circuit diagrams, hardware photographs,
 and experimental results can be added here.
-`
+`,
+
+        // Project Image Filename
+        image: "Smart Watch.jpg"
+
       },
 
 
-      // Project 3: New Engineering Project
+
+      // ======================================
+      // PROJECT 3: PCB KEYCHAINS
+      // ======================================
+
       newproject: {
-        title: "New Engineering Project",
+
+        title: "PCB Keychains",
 
         description:
           "Write a short overview of your new engineering project here.",
@@ -218,52 +425,121 @@ You can also discuss the technical challenges,
 solutions, and final results.
 
 Add additional paragraphs as needed.
-`
+`,
+
+        // Project Image Filename
+        image: "PCB Keychains.jpg"
+
       },
 
 
-      // Project 4: Future Projects
+
+      // ======================================
+      // PROJECT 4: FUTURE PROJECTS
+      // ======================================
+
       future: {
+
         title: "Future Projects",
 
         description:
           "More engineering and research projects coming soon.",
 
         extra:
-          "Additional mechanical engineering, robotics, and electronics projects will be featured here."
+          "Additional mechanical engineering, robotics, and electronics projects will be featured here.",
+
+        // Project Image Filename
+        image: "Future Projects.jpg"
+
       }
 
     };
 
 
-    // Find Popup
+
+    // ======================================
+    // FIND POPUP ELEMENTS
+    // ======================================
+
     const projectModal =
       document.getElementById("project-modal");
 
+    const projectImage =
+      document.getElementById("project-modal-image");
 
-    // Open Popup When Project Is Clicked
+    const imagePlaceholder =
+      document.getElementById("project-image-placeholder");
+
+
+
+    // ======================================
+    // IMAGE LOADING
+    // ======================================
+
+    // Show Image When Loaded
+    projectImage.addEventListener("load", () => {
+
+      projectImage.hidden = false;
+
+      imagePlaceholder.hidden = true;
+
+    });
+
+
+    // Show Placeholder If Image Is Missing
+    projectImage.addEventListener("error", () => {
+
+      projectImage.hidden = true;
+
+      imagePlaceholder.hidden = false;
+
+    });
+
+
+
+    // ======================================
+    // OPEN PROJECT POPUP
+    // ======================================
+
     document.querySelectorAll(".project-card").forEach(card => {
 
       card.addEventListener("click", () => {
 
-        const project = projects[card.dataset.project];
+        const project =
+          projects[card.dataset.project];
 
         if (!project) return;
+
 
         // Set Project Title
         document.getElementById(
           "project-modal-title"
         ).textContent = project.title;
 
-        // Set Description
+
+        // Set Project Description
         document.getElementById(
           "project-modal-description"
         ).textContent = project.description;
+
 
         // Set Additional Details
         document.getElementById(
           "project-modal-extra"
         ).textContent = project.extra;
+
+
+        // Reset Image
+        projectImage.hidden = true;
+
+        imagePlaceholder.hidden = false;
+
+
+        // Set the Image for This Project
+        projectImage.src = project.image;
+
+        projectImage.alt = project.title;
+
 
         // Open Popup With Zoom Animation
         projectModal.showModal();
@@ -273,7 +549,11 @@ Add additional paragraphs as needed.
     });
 
 
-    // Close Popup Using X Button
+
+    // ======================================
+    // CLOSE POPUP USING X BUTTON
+    // ======================================
+
     projectModal.querySelector(".modal-close")
       .addEventListener("click", () => {
 
@@ -282,10 +562,15 @@ Add additional paragraphs as needed.
       });
 
 
-    // Close Popup When Clicking Outside
+
+    // ======================================
+    // CLOSE POPUP BY CLICKING OUTSIDE
+    // ======================================
+
     projectModal.addEventListener("click", event => {
 
-      const rect = projectModal.getBoundingClientRect();
+      const rect =
+        projectModal.getBoundingClientRect();
 
       const clickedOutside =
         event.clientX < rect.left ||
@@ -294,12 +579,16 @@ Add additional paragraphs as needed.
         event.clientY > rect.bottom;
 
       if (clickedOutside) {
+
         projectModal.close();
+
       }
 
     });
 
+
   </script>
+
 
 
   <!-- Smooth Page Transition -->

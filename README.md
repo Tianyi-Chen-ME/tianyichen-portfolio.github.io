@@ -1,9 +1,4 @@
-[Home](#home) | [About Me](#about-me) | [Projects](#projects) | [Experience](#experience) | [Contact](#contact)
 
----
-
-# Home
-Welcome to my personal portfolio!
 
 ### Education 
 Mechanical Engineering, B.S.E University of Michigan, Class of 2028

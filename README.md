@@ -1,4 +1,9 @@
-# Mechanical Engineer
+[Home](#home) | [About Me](#about-me) | [Projects](#projects) | [Experience](#experience) | [Contact](#contact)
+
+---
+
+# Home
+Welcome to my personal portfolio!
 
 ### Education 
 Mechanical Engineering, B.S.E University of Michigan, Class of 2028
@@ -19,6 +24,13 @@ RESEARCH ASSISTANT – Controlled Micro-Combustion R&D	September 2026
 •	Testing insect scale micro-actuator driven via controlled combustion, targeting high force output and controllable locomotion through fuel oxidizer ratio, ignition frequency control, and actuation timing 
 •	Developing a portable fuel tank capable of performing a controlled redox process to produce fuel for the combustion actuator while managing by-products, eliminating dependency on nearby stationary fuel sources
 •	Exploring and testing new solutions of signal transport via method of precisely controlled combustion reaction
+
+Stellbot (星际智行) – Design Research Team	Nanjing, China
+MECHANICAL ENGINEERING INTERN – Hardware/Structure Design and Testing	June 2026 - August 2026
+•	Rearranged and Converted complex robotic dog SolidWorks file into a Unified Robot Description Format file (URDF) in preparation to use in NVIDIA Isaac Sim for reinforcement learning
+•	Used Easy EDA, a PCB design software to design circuit boards for robotic dogs, contributions include a port hub for all 12 joint motors and an STM32 powered PCB for robot internal hardware environment monitoring
+•	Debugged robot dog lithium battery pack code by making a monitor app using Python that displayed battery data along with processing battery usage data automatically to catch unusual behavior and errors when undergoing charging with different current and uneven discharging 
+
 
 ### Honors Plan Development 
 

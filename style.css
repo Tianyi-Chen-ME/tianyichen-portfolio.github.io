@@ -305,10 +305,10 @@ body.page-changing .page-fade {
 }
 
 .education-item img.education-logo {
-  width: 45px;
-  height: 45px;
-  max-width: 45px;
-  max-height: 45px;
+  width: 70px;
+  height: 70px;
+  max-width: 70px;
+  max-height: 70px;
   object-fit: contain;
   flex-shrink: 0;
 }

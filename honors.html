@@ -4,11 +4,12 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
   <title>UMich Honors Program | Tianyi's Portfolio</title>
 
-  <link rel="stylesheet" href="style.css?v=12">
+  <link rel="stylesheet" href="style.css?v=13">
 </head>
 
 <body>
@@ -26,7 +27,9 @@
       <a href="resume.html">Resume</a>
       <a href="experience.html">Experience</a>
       <a href="projects.html">Projects</a>
-      <a href="honors.html" class="active">UMich Honors Program</a>
+      <a href="honors.html" class="active">
+        UMich Honors Program
+      </a>
       <a href="contact.html">Contact</a>
     </nav>
 
@@ -38,51 +41,174 @@
 
     <h1>UMich Honors Program</h1>
 
-    <div class="content-box">
+    <p>
+      Explore my University of Michigan Honors
+      Program work and documentation.
+    </p>
 
-      <h2>University of Michigan Honors Program</h2>
 
-      <p>
-        Welcome to my University of Michigan Honors
-        Program portfolio. This page contains my
-        Honors Program documentation and related work.
-      </p>
+    <!-- Honors Plan Development Card -->
+    <button
+      class="experience-card honors-plan-card"
+      type="button"
+      id="open-honors-modal"
+      aria-haspopup="dialog"
+    >
 
-      <!-- PDF Viewer -->
-      <div class="honors-pdf-container">
+      <div class="experience-card-text">
 
-        <iframe
-          src="honors-program.pdf"
-          title="Umich Honors Program PDF">
-        </iframe>
+        <h3>Honors Plan Development</h3>
 
-      </div>
-
-      <!-- PDF Buttons -->
-      <div class="buttons">
-
-        <a
-          href="honors-program.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn primary"
-        >
-          Open PDF
-        </a>
-
-        <a
-          href="honors-program.pdf"
-          download
-          class="btn secondary"
-        >
-          Download PDF
-        </a>
+        <p>
+          Click to view my Honors Plan Development
+          document and description.
+        </p>
 
       </div>
+
+      <span class="honors-card-arrow"
+            aria-hidden="true">
+        &#8594;
+      </span>
+
+    </button>
+
+  </main>
+
+
+  <!-- Expanded Honors Popup -->
+  <dialog
+    class="experience-modal honors-modal"
+    id="honors-modal"
+    aria-labelledby="honors-modal-title"
+  >
+
+    <!-- Close Button -->
+    <button
+      class="modal-close"
+      type="button"
+      aria-label="Close"
+    >
+      &times;
+    </button>
+
+
+    <!-- Popup Title -->
+    <h2 id="honors-modal-title">
+      Honors Plan Development
+    </h2>
+
+    <p>
+      University of Michigan Honors Program
+    </p>
+
+
+    <!-- PDF Viewer -->
+    <h3>Honors Plan Document</h3>
+
+    <div class="honors-pdf-container">
+
+      <iframe
+        src="honors-program.pdf"
+        title="Honors Plan Development PDF"
+      ></iframe>
 
     </div>
 
-  </main>
+
+    <!-- PDF Buttons -->
+    <div class="buttons">
+
+      <a
+        href="honors-program.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn primary"
+      >
+        Open PDF
+      </a>
+
+      <a
+        href="honors-program.pdf"
+        download
+        class="btn secondary"
+      >
+        Download PDF
+      </a>
+
+    </div>
+
+
+    <!-- Description Below PDF -->
+    <div class="honors-description">
+
+      <h3>Description</h3>
+
+      <p>
+        Write your Honors Plan Development
+        description here.
+      </p>
+
+      <p>
+        You can add information about your academic
+        goals, research interests, engineering
+        experiences, and future plans.
+      </p>
+
+    </div>
+
+  </dialog>
+
+
+  <!-- Honors Popup JavaScript -->
+  <script>
+
+    const honorsModal =
+      document.getElementById("honors-modal");
+
+    const honorsCard =
+      document.getElementById("open-honors-modal");
+
+    const closeButton =
+      honorsModal.querySelector(".modal-close");
+
+
+    // Open Popup
+    honorsCard.addEventListener("click", () => {
+
+      honorsModal.showModal();
+
+    });
+
+
+    // Close Popup Using X
+    closeButton.addEventListener("click", () => {
+
+      honorsModal.close();
+
+    });
+
+
+    // Close Popup When Clicking Outside
+    honorsModal.addEventListener("click", event => {
+
+      const rect = honorsModal.getBoundingClientRect();
+
+      const clickedOutside =
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom;
+
+      if (clickedOutside) {
+
+        honorsModal.close();
+
+      }
+
+    });
+
+  </script>
 
 
   <!-- Smooth Page Transition -->
@@ -90,3 +216,4 @@
 
 </body>
 </html>
+

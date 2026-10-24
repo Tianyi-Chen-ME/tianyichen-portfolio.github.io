@@ -652,19 +652,16 @@ to pin header slots. (PCB printed unsoldered)`,
         document.getElementById(
           "project-modal-title"
         ).textContent = project.title;
-
-
-        // Existing Project Description
-        document.getElementById(
-          "project-modal-description"
-        ).textContent = project.description;
-
-
-        // Existing Additional Details
-        document.getElementById(
-          "project-modal-extra"
-        ).textContent = project.extra;
-
+  
+      // Display Project Details
+      document.getElementById(
+        "project-modal-description"
+      ).textContent = project.summary;
+      
+      // Clear unused additional details
+      document.getElementById(
+        "project-modal-extra"
+      ).textContent = "";
 
         // Skills
         skillsContainer.innerHTML = "";

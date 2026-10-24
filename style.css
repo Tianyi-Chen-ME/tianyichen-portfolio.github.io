@@ -1182,3 +1182,9 @@ body {
   max-height: 85vh;
   overflow-y: auto;
 }
+
+/* Move Honors Program content higher */
+.honors-page {
+  padding-top: 15px;
+}
+

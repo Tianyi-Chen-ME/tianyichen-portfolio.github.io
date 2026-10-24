@@ -1,63 +1,43 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Experience | Troy Chen</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+<section class="experience-section" id="experience">
+  <h2>My Experience</h2>
 
-<body>
+  <div class="experience-list">
 
-<header>
-  <a href="index.html" class="logo">Troy Chen.</a>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="resume.html">Resume</a>
-    <a href="experience.html" class="active">Experience</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+    <!-- Walter E. Lay Laboratory -->
+    <button class="experience-card" type="button" data-experience="lay">
+      <div class="experience-card-text">
+        <h3>Walter E. Lay Automotive Laboratory</h3>
+        <p class="experience-date">Add your dates here</p>
+      </div>
 
-<main class="page-container">
+      <div class="experience-photo">
+        <span>Add Photo</span>
+      </div>
+    </button>
 
-  <h1>My Experience</h1>
+    <!-- Zoetic Robotics Laboratory -->
+    <button class="experience-card" type="button" data-experience="zoetic">
+      <div class="experience-card-text">
+        <h3>Zoetic Robotics Laboratory</h3>
+        <p class="experience-date">Add your dates here</p>
+      </div>
 
-  <div class="content-box">
-
-    <h2>Walter E. Lay Automotive Laboratory</h2>
-    <p><strong>Research Assistant</strong></p>
-    <p>University of Michigan</p>
-
-    <p>
-      Researching combustion engine efficiency
-      and developing photodiode-based sensing
-      circuits to measure combustion phenomena.
-    </p>
+      <div class="experience-photo">
+        <span>Add Photo</span>
+      </div>
+    </button>
 
   </div>
+</section>
 
-  <div class="content-box">
+<!-- Expanded popup -->
+<dialog class="experience-modal" id="experience-modal">
+  <button class="modal-close" type="button" aria-label="Close">×</button>
 
-    <h2>Zoetic Robotics Laboratory</h2>
-    <p><strong>Research Assistant</strong></p>
-    <p>University of Michigan</p>
-
-    <p>
-      Investigating controlled micro-combustion
-      systems for insect-scale robotic actuators,
-      including fuel generation and delivery.
-    </p>
-
-  </div>
-
-  </main>
-
-  <!-- Smooth Page Transition -->
-  <script src="transition.js"></script>
-
-</body>
-</html>
+  <h2 id="modal-title"></h2>
+  <p id="modal-date" class="modal-date"></p>
+  <h3 id="modal-role"></h3>
+  <p id="modal-university"></p>
+  <p id="modal-description"></p>
+</dialog>

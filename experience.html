@@ -1,43 +1,187 @@
 
-<section class="experience-section" id="experience">
-  <h2>My Experience</h2>
+<!DOCTYPE html>
+<html lang="en">
 
-  <div class="experience-list">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience | Troy Chen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    <!-- Walter E. Lay Laboratory -->
-    <button class="experience-card" type="button" data-experience="lay">
-      <div class="experience-card-text">
-        <h3>Walter E. Lay Automotive Laboratory</h3>
-        <p class="experience-date">Add your dates here</p>
-      </div>
+<body>
 
-      <div class="experience-photo">
-        <span>Add Photo</span>
-      </div>
+  <!-- Navigation Bar -->
+  <header>
+    <a href="index.html" class="logo">Troy Chen.</a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="resume.html">Resume</a>
+      <a href="experience.html" class="active">Experience</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+
+  <!-- Experience Section -->
+  <section class="experience-section" id="experience">
+
+    <h2>My Experience</h2>
+
+    <div class="experience-list">
+
+      <!-- Walter E. Lay Laboratory -->
+      <button
+        class="experience-card"
+        type="button"
+        data-experience="lay"
+      >
+
+        <div class="experience-card-text">
+          <h3>Walter E. Lay Automotive Laboratory</h3>
+          <p class="experience-date">Add your dates here</p>
+        </div>
+
+        <div class="experience-photo">
+          <span>Add Photo</span>
+        </div>
+
+      </button>
+
+
+      <!-- Zoetic Robotics Laboratory -->
+      <button
+        class="experience-card"
+        type="button"
+        data-experience="zoetic"
+      >
+
+        <div class="experience-card-text">
+          <h3>Zoetic Robotics Laboratory</h3>
+          <p class="experience-date">Add your dates here</p>
+        </div>
+
+        <div class="experience-photo">
+          <span>Add Photo</span>
+        </div>
+
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- Expanded Experience Popup -->
+  <dialog class="experience-modal" id="experience-modal">
+
+    <button
+      class="modal-close"
+      type="button"
+      aria-label="Close"
+    >
+      &times;
     </button>
 
-    <!-- Zoetic Robotics Laboratory -->
-    <button class="experience-card" type="button" data-experience="zoetic">
-      <div class="experience-card-text">
-        <h3>Zoetic Robotics Laboratory</h3>
-        <p class="experience-date">Add your dates here</p>
-      </div>
+    <h2 id="modal-title"></h2>
 
-      <div class="experience-photo">
-        <span>Add Photo</span>
-      </div>
-    </button>
+    <p id="modal-date" class="modal-date"></p>
 
-  </div>
-</section>
+    <h3 id="modal-role"></h3>
 
-<!-- Expanded popup -->
-<dialog class="experience-modal" id="experience-modal">
-  <button class="modal-close" type="button" aria-label="Close">×</button>
+    <p id="modal-university"></p>
 
-  <h2 id="modal-title"></h2>
-  <p id="modal-date" class="modal-date"></p>
-  <h3 id="modal-role"></h3>
-  <p id="modal-university"></p>
-  <p id="modal-description"></p>
-</dialog>
+    <p id="modal-description"></p>
+
+  </dialog>
+
+
+  <!-- Experience Popup JavaScript -->
+  <script>
+
+    // Experience information
+    const experiences = {
+
+      lay: {
+        title: "Walter E. Lay Automotive Laboratory",
+        date: "Add your dates here",
+        role: "Research Assistant",
+        university: "University of Michigan",
+        description:
+          "Researching combustion engine efficiency and developing photodiode-based sensing circuits to measure combustion phenomena."
+      },
+
+      zoetic: {
+        title: "Zoetic Robotics Laboratory",
+        date: "Add your dates here",
+        role: "Research Assistant",
+        university: "University of Michigan",
+        description:
+          "Investigating controlled micro-combustion systems for insect-scale robotic actuators, including fuel generation and delivery."
+      }
+
+    };
+
+
+    // Find the popup
+    const modal = document.getElementById("experience-modal");
+
+
+    // Open popup when an experience card is clicked
+    document.querySelectorAll(".experience-card").forEach(card => {
+
+      card.addEventListener("click", () => {
+
+        const experience = experiences[card.dataset.experience];
+
+        if (!experience) return;
+
+        document.getElementById("modal-title").textContent =
+          experience.title;
+
+        document.getElementById("modal-date").textContent =
+          experience.date;
+
+        document.getElementById("modal-role").textContent =
+          experience.role;
+
+        document.getElementById("modal-university").textContent =
+          experience.university;
+
+        document.getElementById("modal-description").textContent =
+          experience.description;
+
+        // Display popup at center of screen
+        modal.showModal();
+
+      });
+
+    });
+
+
+    // Close popup using X button
+    document.querySelector(".modal-close").addEventListener("click", () => {
+      modal.close();
+    });
+
+
+    // Close popup when clicking outside the box
+    modal.addEventListener("click", event => {
+
+      if (event.target === modal) {
+        modal.close();
+      }
+
+    });
+
+  </script>
+
+
+  <!-- Smooth Page Transition -->
+  <script src="transition.js"></script>
+
+</body>
+</html>

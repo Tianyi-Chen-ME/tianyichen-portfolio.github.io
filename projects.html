@@ -7,7 +7,7 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-  <title>Projects | Troy Chen</title>
+  <title>Projects | Tianyi Chen</title>
 
   <link rel="stylesheet" href="style.css?v=15">
 
@@ -75,6 +75,17 @@
       color: #7b8593;
       font-size: 16px;
       text-align: center;
+    }
+
+    /* Caption Below Card Image */
+
+    .project-card-caption {
+      display: block;
+      font-size: 14px;
+      line-height: 1.4;
+      color: #526275;
+      text-align: center;
+      margin-top: -8px;
     }
 
 
@@ -193,6 +204,23 @@
       display: none !important;
     }
 
+    /* Popup Image Caption */
+
+    .project-modal-figure {
+      width: 100%;
+      min-width: 0;
+      margin: 0;
+    }
+
+    .project-modal-caption {
+      display: block;
+      margin-top: 12px;
+      font-size: 14px;
+      line-height: 1.5;
+      text-align: center;
+      color: #526275;
+    }
+
 
     /* =====================================
        MOBILE RESPONSIVE
@@ -279,10 +307,13 @@
 
         <div class="project-card-image">
           <img class="project-card-img" alt="" hidden>
+
           <span class="project-card-placeholder">
-            Four Bar Linkage Picture 
+            Image unavailable
           </span>
         </div>
+
+        <span class="project-card-caption"></span>
 
       </button>
 
@@ -301,10 +332,13 @@
 
         <div class="project-card-image">
           <img class="project-card-img" alt="" hidden>
+
           <span class="project-card-placeholder">
-            Smart Watch PCB Picture
+            Image unavailable
           </span>
         </div>
+
+        <span class="project-card-caption"></span>
 
       </button>
 
@@ -323,10 +357,13 @@
 
         <div class="project-card-image">
           <img class="project-card-img" alt="" hidden>
+
           <span class="project-card-placeholder">
-            PCB Keychain Picture
+            Image unavailable
           </span>
         </div>
+
+        <span class="project-card-caption"></span>
 
       </button>
 
@@ -345,10 +382,13 @@
 
         <div class="project-card-image">
           <img class="project-card-img" alt="" hidden>
+
           <span class="project-card-placeholder">
-            RMP Robot Picture
+            Image unavailable
           </span>
         </div>
+
+        <span class="project-card-caption"></span>
 
       </button>
 
@@ -410,16 +450,34 @@
       </div>
 
 
-      <!-- RIGHT SIDE -->
-      <div class="project-modal-image">
+      <!-- RIGHT SIDE: Image and Caption -->
+      <figure class="project-modal-figure">
 
-        <img
-          id="project-modal-image"
-          alt=""
-          hidden
-        >
+        <div class="project-modal-image">
 
-      </div>
+          <img
+            id="project-modal-image"
+            alt=""
+            hidden
+          >
+
+          <span
+            id="project-modal-placeholder"
+            class="project-modal-placeholder"
+            hidden
+          >
+            Image unavailable
+          </span>
+
+        </div>
+
+        <!-- Image Description Below Picture -->
+        <figcaption
+          id="project-modal-caption"
+          class="project-modal-caption"
+        ></figcaption>
+
+      </figure>
 
 
     </div>
@@ -444,24 +502,29 @@
 
         title: "ME 350 Four-Bar Linkage System",
 
-        // Existing card summary preserved
         summary: `Designed a four-bar linkage system with a flashlight
 attached to the end coupler controlled by motor to
 shine flashlight on multiple photodiode target, with precision,
 The system included a full automated control system powered by
 Arduino`,
-        
+
         skills: [
           "Arduino",
           "Four-Bar Linkages",
           "Automation"
         ],
 
-        // Photo shown OUTSIDE the popup
+        // Image shown on project card
         coverImage: "ME350link.jpg",
 
-        // Photo shown INSIDE the popup
-        image: "ME 350 Four-Bar Linkage System.jpg"
+        // Caption underneath card image
+        coverCaption: "Four-bar linkage mechanism",
+
+        // Image shown inside popup
+        image: "ME 350 Four-Bar Linkage System.jpg",
+
+        // Caption underneath popup image
+        imageCaption: "ME 350 four-bar linkage system"
 
       },
 
@@ -474,7 +537,6 @@ Arduino`,
 
         title: "Smart Watch",
 
-        // Existing card summary preserved
         summary: `Designed and built a smart watch
 from PCB to soldering, then finally
 coding it to operate. Used standard Lithium
@@ -490,7 +552,11 @@ display, along with 2 prong magnetic charging.`,
 
         coverImage: "SmartwatchEDAv1.jpg",
 
-        image: "SmartwachPCB.jpeg"
+        coverCaption: "Smartwatch PCB design",
+
+        image: "SmartwachPCB.jpeg",
+
+        imageCaption: "Smartwatch circuit board"
 
       },
 
@@ -503,7 +569,6 @@ display, along with 2 prong magnetic charging.`,
 
         title: "PCB Keychains",
 
-        // Existing card summary preserved
         summary: `Made a working Microcontroller keychian using
 STM32F4 as the MCU, with all the GPIO pins connected
 to pin header slots. (PCB printed unsoldered)`,
@@ -517,7 +582,11 @@ to pin header slots. (PCB printed unsoldered)`,
 
         coverImage: "KeychainEDA.jpg",
 
-        image: "PCBkeychain.jpeg"
+        coverCaption: "PCB keychain layout",
+
+        image: "PCBkeychain.jpeg",
+
+        imageCaption: "PCB keychain hardware"
 
       },
 
@@ -530,20 +599,24 @@ to pin header slots. (PCB printed unsoldered)`,
 
         title: "ME 250 RMP Robot",
 
-        summary: `          
-          Designed a robot vehicle with a virtual four-bar claw 
-          system installed on the vehicle, capable of picking up
-          objects from the ground, while the claw maintained horizontal 
-          position through the whole grab and lift motion. 
-`,
+        summary: `Designed a robot vehicle with a virtual four-bar claw
+system installed on the vehicle, capable of picking up
+objects from the ground, while the claw maintained horizontal
+position through the whole grab and lift motion.`,
 
-        skills: ["Mill",
-                "Lathe",
-                "Waterjet"],
+        skills: [
+          "Mill",
+          "Lathe",
+          "Waterjet"
+        ],
 
         coverImage: "ME250RMProbot.jpg",
 
-        image: "RMP.jpeg"
+        coverCaption: "ME 250 RMP robot",
+
+        image: "RMP.jpeg",
+
+        imageCaption: "RMP robot assembly"
 
       }
 
@@ -578,32 +651,49 @@ to pin header slots. (PCB printed unsoldered)`,
       title
     ) {
 
+      // Hide image while it loads
       imageElement.hidden = true;
-      placeholderElement.hidden = false;
+
+      if (placeholderElement) {
+        placeholderElement.hidden = false;
+      }
 
       if (!filename) {
         imageElement.removeAttribute("src");
         return;
       }
 
+      // Show image after successful loading
       imageElement.onload = function() {
+
         imageElement.hidden = false;
-        placeholderElement.hidden = true;
+
+        if (placeholderElement) {
+          placeholderElement.hidden = true;
+        }
+
       };
 
+      // Show placeholder if image fails
       imageElement.onerror = function() {
+
         imageElement.hidden = true;
-        placeholderElement.hidden = false;
+
+        if (placeholderElement) {
+          placeholderElement.hidden = false;
+        }
+
       };
 
       imageElement.alt = title;
+
       imageElement.src = filename;
 
     }
 
 
     // =====================================
-    // LOAD OUTSIDE CARD PHOTOS
+    // LOAD PROJECT CARD IMAGES
     // =====================================
 
     document.querySelectorAll(".project-card").forEach(card => {
@@ -617,6 +707,12 @@ to pin header slots. (PCB printed unsoldered)`,
 
       const placeholder =
         card.querySelector(".project-card-placeholder");
+
+      const caption =
+        card.querySelector(".project-card-caption");
+
+      // Each project gets its own caption
+      caption.textContent = project.coverCaption;
 
       loadProjectImage(
         image,
@@ -645,18 +741,24 @@ to pin header slots. (PCB printed unsoldered)`,
         document.getElementById(
           "project-modal-title"
         ).textContent = project.title;
-  
-      // Display Project Details
-      document.getElementById(
-        "project-modal-description"
-      ).textContent = project.summary;
-      
-      // Clear unused additional details
-      document.getElementById(
-        "project-modal-extra"
-      ).textContent = "";
 
-        // Skills
+
+        // Project Description
+        document.getElementById(
+          "project-modal-description"
+        ).textContent = project.summary;
+
+
+        // Clear unused details
+        document.getElementById(
+          "project-modal-extra"
+        ).textContent = "";
+
+
+        // =====================================
+        // SKILLS
+        // =====================================
+
         skillsContainer.innerHTML = "";
 
         project.skills.forEach(skill => {
@@ -671,12 +773,23 @@ to pin header slots. (PCB printed unsoldered)`,
 
         });
 
-        // Hide skills section if no skills
         skillsContainer.parentElement.hidden =
           project.skills.length === 0;
 
 
-        // Inside Project Photo
+        // =====================================
+        // POPUP IMAGE CAPTION
+        // =====================================
+
+        document.getElementById(
+          "project-modal-caption"
+        ).textContent = project.imageCaption;
+
+
+        // =====================================
+        // POPUP IMAGE
+        // =====================================
+
         loadProjectImage(
           projectImage,
           projectPlaceholder,
@@ -685,7 +798,10 @@ to pin header slots. (PCB printed unsoldered)`,
         );
 
 
-        // Open Popup
+        // =====================================
+        // SHOW POPUP
+        // =====================================
+
         projectModal.showModal();
 
       });
@@ -706,7 +822,7 @@ to pin header slots. (PCB printed unsoldered)`,
 
 
     // =====================================
-    // CLOSE POPUP WHEN CLICKING OUTSIDE
+    // CLOSE POPUP BY CLICKING OUTSIDE
     // =====================================
 
     projectModal.addEventListener("click", event => {
@@ -727,18 +843,23 @@ to pin header slots. (PCB printed unsoldered)`,
 
   </script>
 
-<!-- Copyright Footer -->
-<footer class="portfolio-footer">
 
-  <p class="footer-credit">
-    &copy; 2026 Tianyi Chen. All Rights Reserved.
-  </p>
+  <!-- =====================================
+       COPYRIGHT FOOTER
+  ===================================== -->
 
-  <p class="footer-description">
-    Portfolio website designed and developed by Tianyi Chen.
-  </p>
+  <footer class="portfolio-footer">
 
-</footer>
+    <p class="footer-credit">
+      &copy; 2026 Tianyi Chen. All Rights Reserved.
+    </p>
+
+    <p class="footer-description">
+      Portfolio website designed and developed by Tianyi Chen.
+    </p>
+
+  </footer>
+
 
   <!-- Smooth Page Transition -->
   <script src="transition.js"></script>

@@ -690,3 +690,133 @@ body.page-changing .page-fade {
   }
 
 }
+
+
+/* =========================================
+   CONTACT FORM DESIGN
+========================================= */
+
+/* Contact Form Container */
+
+.contact-form-box {
+  max-width: 900px;
+}
+
+/* Form Layout */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 30px;
+}
+
+/* Form Field Groups */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Labels */
+
+.form-group label {
+  font-size: 17px;
+  font-weight: 600;
+  color: #172337;
+}
+
+/* Input Fields */
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 15px 18px;
+
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+
+  color: #172337;
+  background: #f7f9fc;
+
+  border: 1px solid #dce3eb;
+  border-radius: 10px;
+
+  outline: none;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Input Focus Animation */
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #0077cc;
+
+  box-shadow:
+    0 0 0 3px rgba(0,119,204,0.12);
+}
+
+/* Message Box */
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* Send Message Button */
+
+.contact-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  align-self: flex-start;
+
+  padding: 15px 35px;
+
+  background: #0077cc;
+  color: white;
+
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Send Button Hover */
+
+.contact-submit-btn:hover {
+  background: #005fa3;
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 8px 25px rgba(0,119,204,0.2);
+}
+
+/* Mobile Design */
+
+@media (max-width: 600px) {
+
+  .contact-form-box {
+    padding: 25px;
+  }
+
+  .contact-submit-btn {
+    width: 100%;
+  }
+
+}
+

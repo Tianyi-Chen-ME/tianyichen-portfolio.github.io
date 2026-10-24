@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Experience | Troy Chen</title>
-<link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="style.css?v=6">
 </head>
 
 <body>
@@ -25,7 +25,6 @@
     </nav>
   </header>
 
-
   <!-- Experience Section -->
   <section class="experience-section" id="experience">
 
@@ -33,7 +32,7 @@
 
     <div class="experience-list">
 
-      <!-- Walter E. Lay Laboratory -->
+      <!-- Experience 1: Walter E. Lay -->
       <button
         class="experience-card"
         type="button"
@@ -42,6 +41,8 @@
 
         <div class="experience-card-text">
           <h3>Walter E. Lay Automotive Laboratory</h3>
+          <p>Research Assistant</p>
+          <p>University of Michigan</p>
           <p class="experience-date">Add your dates here</p>
         </div>
 
@@ -52,7 +53,7 @@
       </button>
 
 
-      <!-- Zoetic Robotics Laboratory -->
+      <!-- Experience 2: Zoetic Robotics -->
       <button
         class="experience-card"
         type="button"
@@ -61,7 +62,71 @@
 
         <div class="experience-card-text">
           <h3>Zoetic Robotics Laboratory</h3>
+          <p>Research Assistant</p>
+          <p>University of Michigan</p>
           <p class="experience-date">Add your dates here</p>
+        </div>
+
+        <div class="experience-photo">
+          <span>Add Photo</span>
+        </div>
+
+      </button>
+
+
+      <!-- Experience 3: Stellbot -->
+      <button
+        class="experience-card"
+        type="button"
+        data-experience="stellbot"
+      >
+
+        <div class="experience-card-text">
+          <h3>Stellbot (星际智行)</h3>
+
+          <p>
+            Mechanical Engineering Intern
+          </p>
+
+          <p>
+            Design Research Team
+          </p>
+
+          <p>Nanjing, China</p>
+
+          <p class="experience-date">
+            June 2026 – August 2026
+          </p>
+        </div>
+
+        <div class="experience-photo">
+          <span>Add Photo</span>
+        </div>
+
+      </button>
+
+
+      <!-- Experience 4: Michigan State University -->
+      <button
+        class="experience-card"
+        type="button"
+        data-experience="spence"
+      >
+
+        <div class="experience-card-text">
+          <h3>Michigan State University – Spence Lab</h3>
+
+          <p>Research Assistant</p>
+
+          <p>
+            Medical Research with Red Blood Cells
+          </p>
+
+          <p>East Lansing, Michigan</p>
+
+          <p class="experience-date">
+            August 2024 – May 2025
+          </p>
         </div>
 
         <div class="experience-photo">
@@ -75,7 +140,7 @@
   </section>
 
 
-  <!-- Expanded Experience Popup -->
+  <!-- Experience Details Popup -->
   <dialog class="experience-modal" id="experience-modal">
 
     <button
@@ -102,35 +167,100 @@
   <!-- Experience Popup JavaScript -->
   <script>
 
-    // Experience information
     const experiences = {
 
+      // Walter E. Lay
       lay: {
         title: "Walter E. Lay Automotive Laboratory",
         date: "Add your dates here",
         role: "Research Assistant",
         university: "University of Michigan",
+
         description:
           "Researching combustion engine efficiency and developing photodiode-based sensing circuits to measure combustion phenomena."
       },
 
+
+      // Zoetic Robotics
       zoetic: {
         title: "Zoetic Robotics Laboratory",
         date: "Add your dates here",
         role: "Research Assistant",
         university: "University of Michigan",
+
         description:
           "Investigating controlled micro-combustion systems for insect-scale robotic actuators, including fuel generation and delivery."
+      },
+
+
+      // Stellbot
+      stellbot: {
+        title: "Stellbot (星际智行) – Design Research Team",
+        date: "June 2026 – August 2026 | Nanjing, China",
+
+        role:
+          "Mechanical Engineering Intern – Hardware/Structure Design and Testing",
+
+        university: "Stellbot (星际智行)",
+
+        description: `
+• Reorganized and converted complex robotic dog
+  SolidWorks files into Unified Robot Description
+  Format (URDF) files for use in NVIDIA Isaac Sim
+  reinforcement learning.
+
+• Designed printed circuit boards using EasyEDA
+  for robotic dogs, including a connection hub
+  for all 12 joint motors and an STM32-powered
+  PCB for monitoring the robot's internal
+  hardware environment.
+
+• Debugged robotic dog lithium battery pack
+  code by developing a Python monitoring
+  application that displayed battery data and
+  automatically processed battery usage data
+  to detect unusual behavior and errors during
+  charging at different currents and uneven
+  discharging.
+`
+      },
+
+
+      // Michigan State University - Spence Lab
+      spence: {
+        title: "Michigan State University – Spence Lab",
+
+        date:
+          "August 2024 – May 2025 | East Lansing, Michigan",
+
+        role:
+          "Research Assistant – Medical Research with Red Blood Cells",
+
+        university: "Michigan State University",
+
+        description: `
+• Studied the effects of C-peptide in patients
+  with type 1 diabetes by measuring ATP release
+  from red blood cells using a dual-pump
+  injection system, a luciferin-luciferase
+  mixture, and a photodiode sensor.
+
+• Explored research involving normoglycemic
+  blood storage solutions for red blood cell
+  preservation, aiming to reduce red blood cell
+  deformation and cell lysis and improve
+  blood transfusion success.
+`
       }
 
     };
 
 
-    // Find the popup
+    // Find popup
     const modal = document.getElementById("experience-modal");
 
 
-    // Open popup when an experience card is clicked
+    // Open popup on card click
     document.querySelectorAll(".experience-card").forEach(card => {
 
       card.addEventListener("click", () => {
@@ -154,7 +284,6 @@
         document.getElementById("modal-description").textContent =
           experience.description;
 
-        // Display popup at center of screen
         modal.showModal();
 
       });
@@ -162,13 +291,13 @@
     });
 
 
-    // Close popup using X button
+    // Close popup with X
     document.querySelector(".modal-close").addEventListener("click", () => {
       modal.close();
     });
 
 
-    // Close popup when clicking outside the box
+    // Close popup when clicking outside
     modal.addEventListener("click", event => {
 
       if (event.target === modal) {

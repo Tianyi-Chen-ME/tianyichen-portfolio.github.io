@@ -820,3 +820,99 @@ body.page-changing .page-fade {
 
 }
 
+
+/* =========================================
+   MESSAGE SENT CONFIRMATION PAGE
+========================================= */
+
+.success-box {
+  max-width: 750px;
+  margin: 50px auto;
+
+  padding: 70px 40px;
+
+  text-align: center;
+
+  border-radius: 20px;
+
+  animation: successFadeIn 0.7s ease forwards;
+}
+
+/* Green Checkmark */
+
+.success-icon {
+  width: 100px;
+  height: 100px;
+
+  margin: 0 auto 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e8f8ee;
+  color: #28a745;
+
+  font-size: 60px;
+  font-weight: bold;
+
+  border-radius: 50%;
+}
+
+/* Confirmation Title */
+
+.success-box h1 {
+  font-size: 36px;
+  margin-bottom: 25px;
+  color: #172337;
+}
+
+/* Confirmation Description */
+
+.success-box p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #526275;
+  margin-bottom: 20px;
+}
+
+/* Return Button */
+
+.return-home-btn {
+  display: inline-block;
+  margin-top: 25px;
+}
+
+/* Entrance Animation */
+
+@keyframes successFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .success-box {
+    margin: 25px auto;
+    padding: 45px 25px;
+  }
+
+  .success-box h1 {
+    font-size: 27px;
+  }
+
+  .success-icon {
+    width: 80px;
+    height: 80px;
+    font-size: 48px;
+  }
+}

@@ -270,8 +270,9 @@ a:focus-visible {
   }
 }
 
-
-/* White Page Transition */
+/* =========================================
+   WHITE PAGE TRANSITION
+========================================= */
 
 .page-fade {
   position: fixed;
@@ -293,8 +294,9 @@ body.page-changing .page-fade {
   pointer-events: auto;
 }
 
-
-/* Education Section */
+/* =========================================
+   EDUCATION SECTION
+========================================= */
 
 .education-item {
   display: flex;
@@ -363,6 +365,9 @@ body.page-changing .page-fade {
   }
 }
 
+/* =========================================
+   EXPERIENCE SECTION - ORIGINAL SIZE
+========================================= */
 
 .experience-section {
   max-width: 1228px;
@@ -382,11 +387,12 @@ body.page-changing .page-fade {
   gap: 30px;
 }
 
-/* Collapsed experience cards */
+/* Collapsed Experience Cards */
 .experience-card {
   width: 100%;
   min-height: 240px;
   padding: 35px 40px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -395,13 +401,16 @@ body.page-changing .page-fade {
   background: white;
   border: none;
   border-radius: 18px;
+
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.04);
 
   text-align: left;
   font: inherit;
   cursor: pointer;
 
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .experience-card:hover {
@@ -414,8 +423,10 @@ body.page-changing .page-fade {
   outline-offset: 4px;
 }
 
+/* Experience Text */
 .experience-card-text {
   flex: 1;
+  min-width: 0;
 }
 
 .experience-card h3 {
@@ -430,11 +441,12 @@ body.page-changing .page-fade {
   font-size: 18px;
 }
 
-/* Square image area */
+/* Square Image Area */
 .experience-photo {
   width: 185px;
   height: 185px;
   flex-shrink: 0;
+
   border-radius: 12px;
   overflow: hidden;
   background: #e9edf2;
@@ -442,6 +454,7 @@ body.page-changing .page-fade {
   display: flex;
   justify-content: center;
   align-items: center;
+
   color: #7b8593;
 }
 
@@ -451,14 +464,19 @@ body.page-changing .page-fade {
   object-fit: cover;
 }
 
-/* Expanded modal */
+/* =========================================
+   EXPERIENCE POPUP - ORIGINAL SIZE
+========================================= */
+
 .experience-modal {
   width: min(850px, 90vw);
   max-height: 85vh;
   overflow-y: auto;
+
   padding: 50px;
   border: none;
   border-radius: 20px;
+
   box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
   color: #19263b;
 }
@@ -492,13 +510,16 @@ body.page-changing .page-fade {
   position: absolute;
   top: 18px;
   right: 25px;
+
   border: none;
   background: transparent;
+
   font-size: 32px;
   cursor: pointer;
   color: #536179;
 }
 
+/* Experience Mobile Layout */
 @media (max-width: 700px) {
   .experience-section h2 {
     font-size: 38px;
@@ -523,15 +544,16 @@ body.page-changing .page-fade {
   }
 }
 
-
-/* Experience Popup Zoom Animation */
+/* =========================================
+   EXPERIENCE POPUP ZOOM ANIMATION
+========================================= */
 
 .experience-modal[open] {
   animation: experienceZoom 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
   transform-origin: center center;
 }
 
-/* Zoom from small to full size */
+/* Zoom From Small to Full Size */
 @keyframes experienceZoom {
   from {
     opacity: 0;
@@ -544,7 +566,7 @@ body.page-changing .page-fade {
   }
 }
 
-/* Smoothly darken background */
+/* Smoothly Darken Background */
 .experience-modal[open]::backdrop {
   animation: backdropFade 0.45s ease both;
 }
@@ -561,238 +583,9 @@ body.page-changing .page-fade {
   }
 }
 
-
-
 /* =========================================
-   EXPERIENCE PAGE - 2X LARGER BOXES
+   CONTACT PAGE SOCIAL BUTTONS
 ========================================= */
-
-/* Overall Experience Page */
-.experience-section {
-  width: 96%;
-  max-width: 1800px;
-  margin: 0 auto;
-  padding: 60px 25px 100px;
-}
-
-.experience-section h2 {
-  font-size: 56px;
-  margin-bottom: 45px;
-}
-
-/* Space Between Experience Cards */
-.experience-list {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-/* Larger Experience Cards */
-.experience-list .experience-card {
-  width: 100%;
-  min-height: 480px;
-  padding: 55px 70px;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 45px;
-
-  background: white;
-  border: none;
-  border-radius: 25px;
-
-  text-align: left;
-  cursor: pointer;
-
-  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
-
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease;
-}
-
-/* Hover Animation */
-.experience-list .experience-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-}
-
-/* Experience Text */
-.experience-card-text {
-  flex: 1;
-  min-width: 0;
-}
-
-.experience-card-text h3 {
-  font-size: 40px;
-  margin-bottom: 20px;
-  color: #172337;
-}
-
-.experience-card-text .experience-date {
-  font-size: 22px;
-  color: #526275;
-}
-
-/* Larger Image Box */
-.experience-list .experience-photo {
-  width: 370px;
-  height: 370px;
-  flex-shrink: 0;
-
-  background: #e8eef5;
-  border-radius: 20px;
-  overflow: hidden;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.experience-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* =========================================
-   LARGER EXPERIENCE POPUP
-========================================= */
-
-.experience-modal {
-  width: min(1200px, 95vw);
-  max-width: 95vw;
-  max-height: 85vh;
-  overflow-y: auto;
-
-  padding: 65px;
-  border: none;
-  border-radius: 25px;
-
-  background: white;
-  box-shadow: 0 25px 80px rgba(0,0,0,0.2);
-}
-
-.experience-modal[open] {
-  margin: auto;
-}
-
-.experience-modal h2 {
-  font-size: 42px;
-  margin-bottom: 25px;
-}
-
-.experience-modal h3 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-.experience-modal p {
-  font-size: 21px;
-  line-height: 1.8;
-  margin-bottom: 20px;
-}
-
-/* =========================================
-   MOBILE RESPONSIVE
-========================================= */
-
-@media (max-width: 850px) {
-
-  .experience-section {
-    width: 100%;
-    padding: 40px 20px;
-  }
-
-  .experience-section h2 {
-    font-size: 38px;
-  }
-
-  .experience-list .experience-card {
-    flex-direction: column;
-    align-items: flex-start;
-    min-height: auto;
-    padding: 28px;
-    gap: 25px;
-  }
-
-  .experience-card-text h3 {
-    font-size: 26px;
-  }
-
-  .experience-card-text .experience-date {
-    font-size: 17px;
-  }
-
-  .experience-list .experience-photo {
-    width: 100%;
-    height: 240px;
-  }
-
-  .experience-modal {
-    width: 95vw;
-    padding: 30px;
-  }
-
-  .experience-modal h2 {
-    font-size: 28px;
-  }
-
-  .experience-modal p {
-    font-size: 17px;
-  }
-}
-
-/* =========================================
-   LARGER EXPERIENCE CARD TEXT
-========================================= */
-
-/* Laboratory Name */
-.experience-list .experience-card-text h3 {
-  font-size: 50px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 25px;
-}
-
-/* Experience Dates */
-.experience-list .experience-card-text .experience-date {
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 1.5;
-}
-
-/* Other Text Inside Experience Cards */
-.experience-list .experience-card-text p {
-  font-size: 28px;
-  line-height: 1.6;
-}
-
-/* Add Photo Placeholder Text */
-.experience-list .experience-photo span {
-  font-size: 26px;
-  font-weight: 500;
-}
-
-/* Mobile Text Sizes */
-@media (max-width: 850px) {
-  .experience-list .experience-card-text h3 {
-    font-size: 30px;
-  }
-
-  .experience-list .experience-card-text .experience-date,
-  .experience-list .experience-card-text p {
-    font-size: 20px;
-  }
-
-  .experience-list .experience-photo span {
-    font-size: 18px;
-  }
-}
-
-/* Contact Page Social Buttons */
 
 .social-links {
   display: flex;
@@ -807,6 +600,7 @@ body.page-changing .page-fade {
   background: #0077cc;
   color: white;
   text-decoration: none;
+
   font-size: 18px;
   font-weight: 600;
   border-radius: 10px;

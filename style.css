@@ -292,3 +292,41 @@ a:focus-visible {
 body.page-changing .page-fade {
   pointer-events: auto;
 }
+
+/* Education Section */
+
+.education-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.education-logo {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.education-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.education-info h3 {
+  font-size: 19px;
+  margin: 0;
+  color: #172337;
+}
+
+.education-info p {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0;
+  color: #526275;
+}
+
+

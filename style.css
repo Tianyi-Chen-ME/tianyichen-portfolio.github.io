@@ -1444,3 +1444,113 @@ body {
   }
 
 }
+
+/* =========================================
+   UPDATED ENGINEERING COMPETENCY LAYOUT
+========================================= */
+
+/* Larger Image on Right */
+.experience-competency-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(300px, 1fr);
+  gap: 26px;
+  align-items: start;
+}
+
+/* Left: Reflection and Accomplishments */
+.experience-competency-text {
+  min-width: 0;
+}
+
+.experience-modal .experience-competency-text > p {
+  margin-bottom: 12px;
+}
+
+/* Accomplishments Box */
+.experience-competency-evidence {
+  margin-top: 10px;
+  padding: 18px 20px;
+  background: #f4f8fc;
+  border: 1px solid #e0eaf3;
+  border-radius: 12px;
+}
+
+.experience-modal .experience-competency-evidence h3 {
+  color: #172337;
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 0 0 9px;
+}
+
+.experience-modal .experience-competency-evidence p {
+  color: #536179;
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Right: Larger Photo */
+.experience-competency-figure {
+  min-width: 0;
+  margin: 0;
+  position: sticky;
+  top: 8px;
+}
+
+.experience-competency-image-frame {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  padding: 8px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f4f7fb;
+  border: 1px solid #e0e8f0;
+  border-radius: 14px;
+}
+
+.experience-competency-image-frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+/* Image Caption */
+.experience-competency-figure figcaption {
+  font-size: 13px;
+  color: #68778a;
+  line-height: 1.5;
+  text-align: center;
+  margin-top: 9px;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE LAYOUT
+========================================= */
+
+@media (max-width: 760px) {
+
+  .experience-competency-layout {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .experience-competency-figure {
+    position: static;
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .experience-competency-image-frame {
+    aspect-ratio: 4 / 3;
+  }
+
+  .experience-modal .experience-competency-text p {
+    font-size: 15px;
+  }
+
+}

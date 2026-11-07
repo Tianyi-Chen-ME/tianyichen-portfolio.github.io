@@ -617,7 +617,6 @@ body.page-changing .page-fade {
   box-shadow: 0 10px 25px rgba(0, 119, 204, 0.2);
 }
 
-
 /* =========================================
    PROJECT CARDS - CLICKABLE
 ========================================= */
@@ -636,37 +635,29 @@ body.page-changing .page-fade {
 }
 
 /* Project Titles */
-
 .project-title {
   display: block;
-
   font-size: 24px;
   font-weight: 700;
-
   color: #172337;
   margin-bottom: 15px;
 }
 
 /* Project Summaries */
-
 .project-summary {
   display: block;
-
   font-size: 17px;
   line-height: 1.9;
-
   color: #526275;
 }
 
 /* Keyboard Focus */
-
 .project-card:focus-visible {
   outline: 3px solid #0077cc;
   outline-offset: 4px;
 }
 
 /* Project Popup Text */
-
 .project-modal #project-modal-description,
 .project-modal #project-modal-extra {
   font-size: 18px;
@@ -674,9 +665,7 @@ body.page-changing .page-fade {
 }
 
 /* Mobile */
-
 @media (max-width: 700px) {
-
   .project-card {
     min-height: 180px;
   }
@@ -688,21 +677,15 @@ body.page-changing .page-fade {
   .project-summary {
     font-size: 16px;
   }
-
 }
-
 
 /* =========================================
    CONTACT FORM DESIGN
 ========================================= */
 
-/* Contact Form Container */
-
 .contact-form-box {
   max-width: 900px;
 }
-
-/* Form Layout */
 
 .contact-form {
   display: flex;
@@ -711,15 +694,11 @@ body.page-changing .page-fade {
   margin-top: 30px;
 }
 
-/* Form Field Groups */
-
 .form-group {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-
-/* Labels */
 
 .form-group label {
   font-size: 17px;
@@ -727,22 +706,16 @@ body.page-changing .page-fade {
   color: #172337;
 }
 
-/* Input Fields */
-
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 15px 18px;
-
   font-family: Arial, sans-serif;
   font-size: 16px;
-
   color: #172337;
   background: #f7f9fc;
-
   border: 1px solid #dce3eb;
   border-radius: 10px;
-
   outline: none;
 
   transition:
@@ -750,42 +723,29 @@ body.page-changing .page-fade {
     box-shadow 0.3s ease;
 }
 
-/* Input Focus Animation */
-
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: #0077cc;
-
-  box-shadow:
-    0 0 0 3px rgba(0,119,204,0.12);
+  box-shadow: 0 0 0 3px rgba(0,119,204,0.12);
 }
-
-/* Message Box */
 
 .form-group textarea {
   resize: vertical;
   min-height: 150px;
 }
 
-/* Send Message Button */
-
 .contact-submit-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
-
   align-self: flex-start;
-
   padding: 15px 35px;
-
   background: #0077cc;
   color: white;
-
   font-family: Arial, sans-serif;
   font-size: 17px;
   font-weight: 600;
-
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -796,20 +756,13 @@ body.page-changing .page-fade {
     box-shadow 0.3s ease;
 }
 
-/* Send Button Hover */
-
 .contact-submit-btn:hover {
   background: #005fa3;
   transform: translateY(-3px);
-
-  box-shadow:
-    0 8px 25px rgba(0,119,204,0.2);
+  box-shadow: 0 8px 25px rgba(0,119,204,0.2);
 }
 
-/* Mobile Design */
-
 @media (max-width: 600px) {
-
   .contact-form-box {
     padding: 25px;
   }
@@ -817,9 +770,7 @@ body.page-changing .page-fade {
   .contact-submit-btn {
     width: 100%;
   }
-
 }
-
 
 /* =========================================
    MESSAGE SENT CONFIRMATION PAGE
@@ -828,46 +779,31 @@ body.page-changing .page-fade {
 .success-box {
   max-width: 750px;
   margin: 50px auto;
-
   padding: 70px 40px;
-
   text-align: center;
-
   border-radius: 20px;
-
   animation: successFadeIn 0.7s ease forwards;
 }
-
-/* Green Checkmark */
 
 .success-icon {
   width: 100px;
   height: 100px;
-
   margin: 0 auto 30px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   background: #e8f8ee;
   color: #28a745;
-
   font-size: 60px;
   font-weight: bold;
-
   border-radius: 50%;
 }
-
-/* Confirmation Title */
 
 .success-box h1 {
   font-size: 36px;
   margin-bottom: 25px;
   color: #172337;
 }
-
-/* Confirmation Description */
 
 .success-box p {
   font-size: 18px;
@@ -876,14 +812,10 @@ body.page-changing .page-fade {
   margin-bottom: 20px;
 }
 
-/* Return Button */
-
 .return-home-btn {
   display: inline-block;
   margin-top: 25px;
 }
-
-/* Entrance Animation */
 
 @keyframes successFadeIn {
   from {
@@ -897,10 +829,7 @@ body.page-changing .page-fade {
   }
 }
 
-/* Mobile */
-
 @media (max-width: 600px) {
-
   .success-box {
     margin: 25px auto;
     padding: 45px 25px;
@@ -921,19 +850,13 @@ body.page-changing .page-fade {
    UMICH HONORS PROGRAM
 ========================================= */
 
-/* Honors Page */
-
 .honors-page {
   max-width: 1228px;
 }
 
-/* Honors Plan Card */
-
 .honors-plan-card {
   margin-top: 30px;
 }
-
-/* Arrow on Right */
 
 .honors-card-arrow {
   font-size: 35px;
@@ -957,17 +880,13 @@ body.page-changing .page-fade {
   overflow-y: auto;
 }
 
-/* PDF Viewer */
-
 .honors-pdf-container {
   width: 100%;
   height: 550px;
   margin-top: 20px;
-
   background: #f1f3f5;
   border: 1px solid #dce3eb;
   border-radius: 12px;
-
   overflow: hidden;
 }
 
@@ -977,12 +896,9 @@ body.page-changing .page-fade {
   border: none;
 }
 
-/* Description Below PDF */
-
 .honors-description {
   margin-top: 40px;
   padding-top: 25px;
-
   border-top: 1px solid #e0e5eb;
 }
 
@@ -998,10 +914,7 @@ body.page-changing .page-fade {
   color: #526275;
 }
 
-/* Mobile */
-
 @media (max-width: 700px) {
-
   .honors-modal {
     padding: 30px 20px;
   }
@@ -1013,38 +926,31 @@ body.page-changing .page-fade {
   .honors-card-arrow {
     font-size: 25px;
   }
-
 }
-
 
 /* =========================================
    LOCK BACKGROUND SCROLL WHEN POPUP OPENS
 ========================================= */
 
-/* Prevent the outside webpage from scrolling */
 html:has(dialog[open]),
 body:has(dialog[open]) {
   overflow: hidden;
 }
 
-/* Allow scrolling inside the popup */
 dialog[open] {
   overflow-y: auto;
   overscroll-behavior: contain;
 }
 
-/* Experience and Projects Popups */
 .experience-modal {
   max-height: 85vh;
   overflow-y: auto;
 }
 
-/* Honors Program Popup */
 .honors-modal {
   max-height: 90vh;
   overflow-y: auto;
 }
-
 
 /* =========================================
    RESUME PAGE
@@ -1054,18 +960,13 @@ dialog[open] {
   max-width: 1200px;
 }
 
-/* Resume PDF Viewer */
-
 .resume-pdf-container {
   width: 100%;
   height: 950px;
-
   margin-top: 30px;
-
   background: #f1f3f5;
   border: 1px solid #dce3eb;
   border-radius: 12px;
-
   overflow: hidden;
 }
 
@@ -1075,18 +976,15 @@ dialog[open] {
   border: none;
 }
 
-/* Mobile Responsive */
-
 @media (max-width: 700px) {
-
   .resume-pdf-container {
     height: 550px;
   }
-
 }
 
-
-/* Portfolio Footer */
+/* =========================================
+   PORTFOLIO FOOTER
+========================================= */
 
 .portfolio-footer {
   background: white;
@@ -1126,8 +1024,9 @@ dialog[open] {
   text-decoration: underline;
 }
 
-
-/* Fix Page Scrolling and Footer */
+/* =========================================
+   PAGE SCROLLING AND FOOTER
+========================================= */
 
 html {
   height: auto;
@@ -1148,13 +1047,11 @@ body {
   width: 100%;
 }
 
-/* Allow Honors Page to expand */
 .honors-page {
   height: auto;
   overflow: visible;
 }
 
-/* Copyright Footer */
 .portfolio-footer {
   width: 100%;
   flex-shrink: 0;
@@ -1177,14 +1074,373 @@ body {
   margin-bottom: 0;
 }
 
-/* Allow scrolling inside the Honors popup */
 .honors-modal {
   max-height: 85vh;
   overflow-y: auto;
 }
 
-/* Move Honors Program content higher */
 .honors-page {
   padding-top: 15px;
 }
 
+
+/* ============================================================
+   NEW: ENGINEERING COMPETENCY REFLECTION
+   TWO-PAGE SLIDING EXPERIENCE POPUP
+   ============================================================ */
+
+.experience-modal {
+  width: min(960px, 92vw);
+  height: min(760px, 88vh);
+  max-height: 88vh;
+  padding: 35px 38px 26px;
+  overflow: hidden;
+}
+
+.experience-modal[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-modal .modal-close {
+  top: 14px;
+  right: 20px;
+  z-index: 3;
+  padding: 0 5px;
+}
+
+/* Slider Container */
+.experience-modal-slider {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* Contains Both Popup Pages */
+.experience-modal-track {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: transform 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+/* Slide to Second Page */
+.experience-modal-track.show-competency {
+  transform: translateX(-100%);
+}
+
+/* Individual Popup Pages */
+.experience-slide {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Scrollable Content */
+.experience-slide-content {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  padding: 5px 12px 10px 0;
+}
+
+/* Small Section Label */
+.experience-modal .experience-modal-kicker {
+  display: inline-block;
+  width: fit-content;
+  color: #0077cc;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 1px 0 15px;
+}
+
+/* Popup Titles */
+.experience-modal .experience-slide h2 {
+  padding-right: 32px;
+  margin-bottom: 12px;
+  line-height: 1.18;
+}
+
+.experience-modal .experience-slide h2:focus {
+  outline: none;
+}
+
+/* Experience Date */
+.experience-modal .modal-date {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0077cc;
+}
+
+/* Experience Role */
+.experience-modal .experience-slide--overview h3 {
+  font-size: 19px;
+  line-height: 1.5;
+  margin: 16px 0 17px;
+}
+
+/* Original Description Paragraphs */
+.experience-description p {
+  margin: 0 0 17px;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+/* Bottom Navigation */
+.experience-modal-nav {
+  flex-shrink: 0;
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 8px;
+  padding: 15px 0 3px;
+  border-top: 1px solid #e8edf3;
+  background: #fff;
+  z-index: 1;
+}
+
+/* Navigation Buttons */
+.experience-next-button,
+.experience-back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  max-width: 100%;
+  border-radius: 9px;
+  padding: 12px 18px;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* Next Button */
+.experience-next-button {
+  background: #0077cc;
+  color: #fff;
+  border: 1px solid #0077cc;
+}
+
+.experience-next-button:hover {
+  background: #005fa5;
+  transform: translateX(2px);
+}
+
+/* Back Button */
+.experience-back-button {
+  color: #006dbb;
+  border: 1px solid #bcd7ea;
+  background: #fff;
+}
+
+.experience-back-button:hover {
+  background: #eff7fe;
+  transform: translateX(-2px);
+}
+
+/* Keyboard Accessibility */
+.experience-next-button:focus-visible,
+.experience-back-button:focus-visible {
+  outline: 3px solid #0077cc;
+  outline-offset: 3px;
+}
+
+/* Page Number */
+.experience-page-count {
+  color: #7b8794;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Competency Experience Name */
+.experience-modal .competency-experience-name {
+  margin: 0 0 20px;
+  color: #6b7789;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Two-column Competency Layout */
+.experience-competency-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(200px, 260px);
+  gap: 30px;
+  align-items: start;
+}
+
+/* Left Column */
+.experience-competency-text {
+  min-width: 0;
+}
+
+.experience-modal .experience-competency-text h3 {
+  color: #172337;
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 0 0 9px;
+}
+
+.experience-modal .experience-competency-text p {
+  font-size: 16px;
+  line-height: 1.72;
+  margin: 0 0 22px;
+}
+
+/* Right Column */
+.experience-competency-figure {
+  min-width: 0;
+  margin: 0;
+}
+
+/* Image Container */
+.experience-competency-image-frame {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  padding: 12px;
+
+  background: #f4f7fb;
+  border: 1px solid #e0e8f0;
+  border-radius: 14px;
+}
+
+/* Image Sizing */
+.experience-competency-image-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Image Caption */
+.experience-competency-figure figcaption {
+  color: #68778a;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-top: 9px;
+  text-align: center;
+}
+
+/* Evidence Box */
+.experience-competency-evidence {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f4f8fc;
+  border-radius: 12px;
+  border: 1px solid #e0eaf3;
+}
+
+.experience-competency-evidence strong {
+  display: block;
+  color: #26384c;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+
+.experience-modal .experience-competency-evidence p {
+  margin: 0;
+  color: #536179;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   MOBILE COMPETENCY POPUP
+========================================= */
+
+@media (max-width: 700px) {
+
+  .experience-modal {
+    width: 94vw;
+    height: min(740px, 88vh);
+    max-height: 88vh;
+    padding: 28px 18px 18px;
+    border-radius: 16px;
+  }
+
+  .experience-modal .experience-slide h2 {
+    font-size: 25px;
+    padding-right: 22px;
+  }
+
+  .experience-modal .experience-slide--overview h3 {
+    font-size: 17px;
+  }
+
+  .experience-description p {
+    font-size: 15px;
+  }
+
+  /* Stack Picture Below Text */
+  .experience-competency-layout {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .experience-competency-figure {
+    max-width: 360px;
+  }
+
+  .experience-competency-image-frame {
+    aspect-ratio: 16 / 9;
+  }
+
+  .experience-modal .experience-competency-text p {
+    font-size: 15px;
+  }
+
+  .experience-next-button,
+  .experience-back-button {
+    font-size: 13px;
+    padding: 11px 12px;
+  }
+
+  .experience-modal-nav {
+    gap: 7px;
+  }
+}
+
+/* Reduced Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+  .experience-modal-track {
+    transition: none;
+  }
+
+  .experience-modal[open],
+  .experience-modal[open]::backdrop {
+    animation: none;
+  }
+
+  .experience-next-button,
+  .experience-back-button {
+    transition: none;
+  }
+
+}

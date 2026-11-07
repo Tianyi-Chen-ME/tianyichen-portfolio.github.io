@@ -1334,7 +1334,7 @@ body {
 /* Larger Image at Original Proportions */
 .experience-competency-image-frame img {
   display: block;
-  width: 100%;
+  width: 80%;
   height: auto;
   object-fit: contain;
   border-radius: 0;

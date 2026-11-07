@@ -6,14 +6,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Experience | Troy Chen</title>
-  <link rel="stylesheet" href="style.css?v=16">
+  <link rel="stylesheet" href="style.css?v=17">
 </head>
 
 <body>
 
-  <!-- Navigation Bar -->
+  <!-- =====================================
+       NAVIGATION BAR
+  ===================================== -->
+
   <header>
-    <a href="index.html" class="logo">Tianyi's Portfolio</a>
+
+    <a href="index.html" class="logo">
+      Tianyi's Portfolio
+    </a>
 
     <nav>
       <a href="index.html">Home</a>
@@ -24,114 +30,147 @@
       <a href="honors.html">UMich Honors Program</a>
       <a href="contact.html">Contact</a>
     </nav>
+
   </header>
 
-  <!-- Experience Section -->
+
+  <!-- =====================================
+       EXPERIENCE SECTION
+  ===================================== -->
+
   <section class="experience-section" id="experience">
 
     <h2>My Experience</h2>
 
     <div class="experience-list">
 
-      <!-- Experience 1: Walter E. Lay -->
+      <!-- Experience 1 -->
       <button
         class="experience-card"
         type="button"
         data-experience="lay"
       >
+
         <div class="experience-card-text">
+
           <h3>Walter E. Lay Automotive Laboratory</h3>
+
           <p>Research Assistant, University of Michigan</p>
-          <p class="experience-date">September 2026 - Present</p>
+
+          <p class="experience-date">
+            September 2026 - Present
+          </p>
+
         </div>
 
         <div class="experience-photo">
-          <img
-            src="Autolab.jpg"
-            alt="Experience Photo"
-          >
+          <img src="Autolab.jpg" alt="Experience Photo">
         </div>
+
       </button>
 
-      <!-- Experience 2: Zoetic Robotics -->
+
+      <!-- Experience 2 -->
       <button
         class="experience-card"
         type="button"
         data-experience="zoetic"
       >
+
         <div class="experience-card-text">
+
           <h3>Zoetic Robotics Laboratory</h3>
+
           <p>Research Assistant, University of Michigan</p>
-          <p class="experience-date">September 2026 - Present</p>
+
+          <p class="experience-date">
+            September 2026 - Present
+          </p>
+
         </div>
 
         <div class="experience-photo">
-          <img
-            src="Zoetic logo.jpg"
-            alt="Experience Photo"
-          >
+          <img src="Zoetic logo.jpg" alt="Experience Photo">
         </div>
+
       </button>
 
-      <!-- Experience 3: Stellbot -->
+
+      <!-- Experience 3 -->
       <button
         class="experience-card"
         type="button"
         data-experience="stellbot"
       >
+
         <div class="experience-card-text">
+
           <h3>Stellbot (星际智行)</h3>
+
           <p>Mechanical Engineering Intern, Nanjing, China</p>
+
           <p class="experience-date">
             June 2026 – August 2026
           </p>
+
         </div>
 
         <div class="experience-photo">
-          <img
-            src="XJZX logo square.jpg"
-            alt="Experience Photo"
-          >
+          <img src="XJZX logo square.jpg" alt="Experience Photo">
         </div>
+
       </button>
 
-      <!-- Experience 4: Michigan State University -->
+
+      <!-- Experience 4 -->
       <button
         class="experience-card"
         type="button"
         data-experience="spence"
       >
+
         <div class="experience-card-text">
+
           <h3>Spence Lab</h3>
+
           <p>Research Assistant, Michigan State University</p>
+
           <p class="experience-date">
             August 2024 – May 2025
           </p>
+
         </div>
 
         <div class="experience-photo">
-          <img
-            src="msu iq.jpg"
-            alt="Experience Photo"
-          >
+          <img src="msu iq.jpg" alt="Experience Photo">
         </div>
+
       </button>
 
     </div>
+
   </section>
 
-  <!-- Two-page sliding experience popup -->
+
+  <!-- =====================================
+       TWO-PAGE EXPERIENCE POPUP
+  ===================================== -->
+
   <dialog
     class="experience-modal"
     id="experience-modal"
     aria-label="Experience details and engineering competency reflection"
   >
 
+    <!-- Close Button -->
     <button
       class="modal-close"
       type="button"
       aria-label="Close experience popup"
-    >&times;</button>
+    >
+      &times;
+    </button>
+
 
     <div class="experience-modal-slider">
 
@@ -140,7 +179,11 @@
         id="experience-modal-track"
       >
 
-        <!-- PAGE 1: Experience Description -->
+
+        <!-- =====================================
+             PAGE 1: EXPERIENCE DESCRIPTION
+        ===================================== -->
+
         <section
           class="experience-slide experience-slide--overview"
           id="experience-overview"
@@ -150,7 +193,7 @@
           <div class="experience-slide-content">
 
             <span class="experience-modal-kicker">
-              Experience overview
+              Experience Overview
             </span>
 
             <h2 id="modal-title" tabindex="-1"></h2>
@@ -166,7 +209,8 @@
 
           </div>
 
-          <!-- Button to Competency Page -->
+
+          <!-- Next Page Button -->
           <div class="experience-modal-nav">
 
             <button
@@ -175,6 +219,7 @@
               type="button"
             >
               Engineering Competency &amp; Reflection
+
               <span aria-hidden="true">&rarr;</span>
             </button>
 
@@ -189,7 +234,12 @@
 
         </section>
 
-        <!-- PAGE 2: Engineering Competency -->
+
+
+        <!-- =====================================
+             PAGE 2: ENGINEERING COMPETENCY
+        ===================================== -->
+
         <section
           class="experience-slide experience-slide--competency"
           id="experience-competency"
@@ -200,32 +250,57 @@
           <div class="experience-slide-content">
 
             <span class="experience-modal-kicker">
-              Michigan Engineering competency
+              Michigan Engineering Competency
             </span>
 
-            <h2 id="competency-title" tabindex="-1"></h2>
+            <h2
+              id="competency-title"
+              tabindex="-1"
+            ></h2>
 
             <p
               class="competency-experience-name"
               id="competency-experience"
             ></p>
 
+
+            <!-- =================================
+                 TWO COLUMN LAYOUT
+            ================================= -->
+
             <div class="experience-competency-layout">
 
-              <!-- Left: Reflection -->
+
+              <!-- =============================
+                   LEFT SIDE: REFLECTION
+                   AND ACCOMPLISHMENTS
+              ============================= -->
+
               <div class="experience-competency-text">
 
+                <!-- Reflection -->
                 <h3>How I developed this competency</h3>
 
                 <p id="competency-developed"></p>
 
-                <h3>Building on the competency</h3>
 
-                <p id="competency-next-step"></p>
+                <!-- Accomplishments -->
+                <div class="experience-competency-evidence">
+
+                  <h3>Accomplishments</h3>
+
+                  <p id="competency-evidence"></p>
+
+                </div>
 
               </div>
 
-              <!-- Right: Picture -->
+
+
+              <!-- =============================
+                   RIGHT SIDE: LARGER IMAGE
+              ============================= -->
+
               <figure class="experience-competency-figure">
 
                 <div class="experience-competency-image-frame">
@@ -242,23 +317,15 @@
                   id="competency-image-caption"
                 ></figcaption>
 
-                <div class="experience-competency-evidence">
-
-                  <strong>
-                    Accomplishments
-                  </strong>
-
-                  <p id="competency-evidence"></p>
-
-                </div>
-
               </figure>
+
 
             </div>
 
           </div>
 
-          <!-- Button to Return to Original Experience -->
+
+          <!-- Back Button -->
           <div class="experience-modal-nav">
 
             <button
@@ -267,6 +334,7 @@
               type="button"
             >
               <span aria-hidden="true">&larr;</span>
+
               Back to Experience
             </button>
 
@@ -281,15 +349,23 @@
 
         </section>
 
+
       </div>
+
     </div>
+
   </dialog>
 
 
-  <!-- EXPERIENCE JAVASCRIPT -->
+
+  <!-- =====================================
+       EXPERIENCE JAVASCRIPT
+  ===================================== -->
+
   <script>
 
     const experiences = {
+
 
       // ======================================
       // WALTER E. LAY AUTOMOTIVE LABORATORY
@@ -303,6 +379,7 @@
 
         role: "Combustion Engine Efficiency R&D - University of Michigan, Ann Arbor",
 
+        // ORIGINAL DESCRIPTION - UNCHANGED
         description: `
         I am currently working under Dr. Andre Boehman, my research includes creating a photodiode based sensor to detect light emission inside
         the engine combustion chamber. I designed the circuit layout and PCB to host 8 photodiodes, processing each of the photodiodes output using
@@ -313,21 +390,28 @@
         combustion engine piston, to try to achieve smooth idling of the engine when 100% ethanol fuel is being used.
         `,
 
+
         // ENGINEERING COMPETENCY
         competency: "Systems Thinking (Authentic Problem Solving)",
 
+
+        // REFLECTION
         development: "I developed systems thinking while designing a photodiode-based sensor for combustion research. I could not treat the eight photodiodes, transimpedance amplifiers, additional op-amp stages, and output headers as unrelated parts. Each part had to contribute to the same goal: turning light emitted in the combustion chamber into signals that could be measured and analyzed in LabVIEW. Designing the PCB made me think about the entire signal path, from sensing to data collection, and how the electronics support a larger question about engine combustion. This experience helped me move beyond focusing only on individual circuit components and start evaluating how they work together as a measurement system.",
 
-        // CHANGE THIS TO YOUR OWN PHOTO
+
+        // ACCOMPLISHMENTS
+        evidence: "Sensor with eight photodiode channels, transimpedance and op-amp signal conditioning, and LabVIEW-ready outputs.",
+
+
+        // COMPETENCY IMAGE
         reflectionImage: "Autolab.jpg",
 
         reflectionImageAlt: "Walter E. Lay Automotive Laboratory image",
 
-        reflectionImageCaption: "Walter E. Lay Automotive Laboratory",
-
-        evidence: "Sensor with eight photodiode channels, transimpedance and op-amp signal conditioning, and LabVIEW-ready outputs."
+        reflectionImageCaption: "Walter E. Lay Automotive Laboratory"
 
       },
+
 
 
       // ======================================
@@ -342,6 +426,7 @@
 
         role: "Controlled Micro-Combustion R&D - University of Michigan, Ann Arbor",
 
+        // ORIGINAL DESCRIPTION - UNCHANGED
         description: `
         I am currently working under Dr. Cameron Aubin on designing a micro-fuel tank for our insect scale micro-combustion actuators
         my research focus on designing a fuel tank that can host a stable chemical reaction to produce the needed fuel, deliver the
@@ -352,21 +437,28 @@
         flow of electrons. Our group also achieved some logic gates using this combustion signal design.
         `,
 
+
         // ENGINEERING COMPETENCY
         competency: "Critical Thinking",
 
+
+        // REFLECTION
         development: "I developed critical thinking by working on engineering problems where a conventional design would not necessarily fit. For an insect-scale combustion actuator, I have been designing a micro fuel tank that must account for fuel production, steady and controllable delivery, and the buildup of reaction by-products. Those constraints forced me to think about several functions at once instead of treating a fuel tank as just a storage container. I also explored a very different approach to communication: using controlled combustion waves to carry signals and create logic-gate behavior. Both projects challenged me to consider unusual ideas while still asking whether they could function in a practical engineered system.",
 
-        // CHANGE THIS TO YOUR OWN PHOTO
+
+        // ACCOMPLISHMENTS
+        evidence: "Micro fuel-tank design, controlled fuel delivery, by-product management, and combustion-based signaling.",
+
+
+        // COMPETENCY IMAGE
         reflectionImage: "Zoetic logo.jpg",
 
         reflectionImageAlt: "Zoetic Robotics Laboratory logo",
 
-        reflectionImageCaption: "Zoetic Robotics Laboratory",
-
-        evidence: "Micro fuel-tank design, controlled fuel delivery, by-product management, and combustion-based signaling."
+        reflectionImageCaption: "Zoetic Robotics Laboratory"
 
       },
+
 
 
       // ======================================
@@ -381,6 +473,7 @@
 
         role: "Hardware/Structure Design and Testing - Nanjing, China",
 
+        // ORIGINAL DESCRIPTION - UNCHANGED
         description: `
         This is an internship I did in China in the Summer of 2026 where I worked for a company developing robotic dogs. During the internship I reorganized
         and converted robotic dog SolidWorks files into a Unified Robot Description Format (URDF) file. \n
@@ -396,21 +489,28 @@
         Finally I got a chance to start learning how to code STM32 microcontrollers using the Hardware Abstraction Layer (HAL) library with CubeMX and Keil µVision.
         `,
 
+
         // ENGINEERING COMPETENCY
         competency: "Technical Problem-Solving",
 
+
+        // REFLECTION
         development: "My internship at Stellbot strengthened my ability to solve problems that arise when working with complex robotic systems. I worked on converting robotic-dog assemblies from SolidWorks into URDF, designed and assembled circuit boards in EasyEDA, and created a Python application that transformed battery-pack data into useful monitoring displays. The application automatically flagged unusual battery behavior, plotted voltage against state of charge, and offered both Chinese and English interfaces. I also began learning STM32 programming using CubeMX, the HAL library, and Keil µVision. Moving among mechanical design, electronics, software, and embedded systems taught me to identify what I did not know, learn the necessary workflow, and put that learning into practice.",
 
-        // CHANGE THIS TO YOUR OWN PHOTO
+
+        // ACCOMPLISHMENTS
+        evidence: "SolidWorks-to-URDF conversion, EasyEDA PCB design and soldering, Python battery monitoring, and STM32/HAL learning.",
+
+
+        // COMPETENCY IMAGE
         reflectionImage: "XJZX logo square.jpg",
 
         reflectionImageAlt: "Stellbot company logo",
 
-        reflectionImageCaption: "Stellbot (星际智行)",
-
-        evidence: "SolidWorks-to-URDF conversion, EasyEDA PCB design and soldering, Python battery monitoring, and STM32/HAL learning."
+        reflectionImageCaption: "Stellbot (星际智行)"
 
       },
+
 
 
       // ======================================
@@ -425,6 +525,7 @@
 
         role: "Medical Research with Red Blood Cells- Michigan State University",
 
+        // ORIGINAL DESCRIPTION - UNCHANGED
         description: `
         I worked under Dr. Dana Spence in researching the effect of C-peptide in glucose transport in patient with type one diabetes, my research included
         testing the ATP release of red blood cells (RBC) in different blood samples, using a dual pump injection system and measuring bioluminescence release of
@@ -434,23 +535,30 @@
         the RBCs to keep them from deforming over time and lysising.
         `,
 
+
         // ENGINEERING COMPETENCY
         competency: "Risk Management",
 
+
+        // REFLECTION
         development: "I began developing risk-management skills through experiments where changes in testing conditions could affect the quality of the results and the condition of the blood samples. In the red-blood-cell storage project, I investigated bag coatings and how much or how often cells were supplied with nutrients, with the goal of limiting cell deformation and lysis over time. I also worked with a dual-pump injection system and luciferin–luciferase bioluminescence measurements to study ATP release from different samples. These experiments made me more aware that engineering and research decisions must account for possible failure modes, biological variability, and the consequences of drawing conclusions from measurements.",
 
-        // CHANGE THIS TO YOUR OWN PHOTO
+
+        // ACCOMPLISHMENTS
+        evidence: "ATP bioluminescence measurements, red-blood-cell storage studies, and comparisons of bag coatings and feeding conditions.",
+
+
+        // COMPETENCY IMAGE
         reflectionImage: "msu iq.jpg",
 
         reflectionImageAlt: "Michigan State University research image",
 
-        reflectionImageCaption: "Spence Lab, Michigan State University",
-
-        evidence: "ATP bioluminescence measurements, red-blood-cell storage studies, and comparisons of bag coatings and feeding conditions."
+        reflectionImageCaption: "Spence Lab, Michigan State University"
 
       }
 
     };
+
 
 
     // ======================================
@@ -470,25 +578,36 @@
     const backButton = document.getElementById("competency-back");
 
 
-    // Switch between the two pages
+
+    // ======================================
+    // SWITCH BETWEEN POPUP PAGES
+    // ======================================
+
     function showExperiencePage(showCompetency, moveFocus = true) {
 
       overviewSlide.inert = showCompetency;
 
       competencySlide.inert = !showCompetency;
 
-      track.classList.toggle("show-competency", showCompetency);
+      track.classList.toggle(
+        "show-competency",
+        showCompetency
+      );
 
       const activeSlide = showCompetency
         ? competencySlide
         : overviewSlide;
 
-      activeSlide.querySelector(".experience-slide-content").scrollTop = 0;
+      activeSlide.querySelector(
+        ".experience-slide-content"
+      ).scrollTop = 0;
 
       if (moveFocus && modal.open) {
 
         document.getElementById(
-          showCompetency ? "competency-title" : "modal-title"
+          showCompetency
+            ? "competency-title"
+            : "modal-title"
         ).focus({ preventScroll: true });
 
       }
@@ -496,10 +615,15 @@
     }
 
 
-    // Format original descriptions as paragraphs
+
+    // ======================================
+    // FORMAT ORIGINAL EXPERIENCE DESCRIPTIONS
+    // ======================================
+
     function fillExperienceDescription(description) {
 
-      const descriptionContainer = document.getElementById("modal-description");
+      const descriptionContainer =
+        document.getElementById("modal-description");
 
       descriptionContainer.replaceChildren();
 
@@ -520,49 +644,71 @@
     }
 
 
-    // Open the experience selected by the user
+
+    // ======================================
+    // OPEN EXPERIENCE POPUP
+    // ======================================
+
     document.querySelectorAll(".experience-card").forEach(card => {
 
       card.addEventListener("click", () => {
 
-        const experience = experiences[card.dataset.experience];
+        const experience =
+          experiences[card.dataset.experience];
 
         if (!experience) return;
 
-        // Original experience content
-        document.getElementById("modal-title").textContent = experience.title;
 
-        document.getElementById("modal-date").textContent = experience.date;
+        // Original Experience Content
+        document.getElementById("modal-title").textContent =
+          experience.title;
 
-        document.getElementById("modal-role").textContent = experience.role;
+        document.getElementById("modal-date").textContent =
+          experience.date;
+
+        document.getElementById("modal-role").textContent =
+          experience.role;
 
         fillExperienceDescription(experience.description);
 
 
-        // Engineering competency content
-        document.getElementById("competency-title").textContent = experience.competency;
 
-        document.getElementById("competency-experience").textContent = experience.title;
+        // Engineering Competency Content
+        document.getElementById("competency-title").textContent =
+          experience.competency;
 
-        document.getElementById("competency-developed").textContent = experience.development;
-
-        document.getElementById("competency-next-step").textContent = experience.nextStep;
-
-        document.getElementById("competency-evidence").textContent = experience.evidence;
+        document.getElementById("competency-experience").textContent =
+          experience.title;
 
 
-        // Engineering competency image
-        const reflectionImage = document.getElementById("competency-image");
-
-        reflectionImage.src = experience.reflectionImage;
-
-        reflectionImage.alt = experience.reflectionImageAlt;
-
-        document.getElementById("competency-image-caption").textContent =
-          experience.reflectionImageCaption;
+        // Reflection
+        document.getElementById("competency-developed").textContent =
+          experience.development;
 
 
-        // Always open on the original experience page
+        // Accomplishments
+        document.getElementById("competency-evidence").textContent =
+          experience.evidence;
+
+
+
+        // Engineering Competency Image
+        const reflectionImage =
+          document.getElementById("competency-image");
+
+        reflectionImage.src =
+          experience.reflectionImage;
+
+        reflectionImage.alt =
+          experience.reflectionImageAlt;
+
+        document.getElementById(
+          "competency-image-caption"
+        ).textContent = experience.reflectionImageCaption;
+
+
+
+        // Always Open on the Original Experience Page
         showExperiencePage(false, false);
 
         modal.showModal();
@@ -572,43 +718,77 @@
     });
 
 
-    // Move to engineering competency page
+
+    // ======================================
+    // NEXT PAGE BUTTON
+    // ======================================
+
     nextButton.addEventListener("click", () => {
+
       showExperiencePage(true);
+
     });
 
 
-    // Move back to experience page
+
+    // ======================================
+    // BACK BUTTON
+    // ======================================
+
     backButton.addEventListener("click", () => {
+
       showExperiencePage(false);
+
     });
 
 
-    // Close popup
+
+    // ======================================
+    // CLOSE POPUP
+    // ======================================
+
     document.querySelector(".modal-close").addEventListener("click", () => {
+
       modal.close();
+
     });
 
 
-    // Click outside popup to close it
+
+    // ======================================
+    // CLICK OUTSIDE POPUP TO CLOSE
+    // ======================================
+
     modal.addEventListener("click", event => {
 
       if (event.target === modal) {
+
         modal.close();
+
       }
 
     });
 
 
-    // Reset the popup when closed
+
+    // ======================================
+    // RESET POPUP WHEN CLOSED
+    // ======================================
+
     modal.addEventListener("close", () => {
+
       showExperiencePage(false, false);
+
     });
 
   </script>
 
 
-  <!-- Copyright Footer -->
+
+  <!-- =====================================
+       COPYRIGHT FOOTER
+  ===================================== -->
+
   <footer class="portfolio-footer">
 
     <p class="footer-credit">
@@ -622,9 +802,12 @@
   </footer>
 
 
-  <!-- Smooth Page Transition -->
+
+  <!-- =====================================
+       SMOOTH PAGE TRANSITION
+  ===================================== -->
+
   <script src="transition.js"></script>
 
 </body>
 </html>
-
